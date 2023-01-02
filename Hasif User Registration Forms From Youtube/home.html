@@ -1,0 +1,46 @@
+<!---under template directory--->
+
+<!DOCTYPE html>
+<html lang="en" xmlns = "http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<div align="center">
+  <br><br><br>
+  <h2>User Registration</h2>
+
+<form method = "POST">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" required><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" required><br><br>
+    <!--Birthday-->
+    <label for="birthday">Today's date:</label>
+    <input type="date" id="birthday" name="birthday" required><br><br>
+    <!--Age-->
+    <label>Age</label>
+    <input type="number" id="age" name="age" required><br><br>
+    <!--phone number-->
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" maxlength="8" placeholder="+65">
+    <!--Gender-->
+    <p>Gender:</p>
+    <input type="radio" id="male" name="male" value="male">
+    <label>Male</label><br>
+    <input type="radio" id="female" name="female" value="female">
+    <label>Female</label><br>
+    <!--email address-->
+    <label>Email Address: </label>
+    <input type="email" id="email" name="email "required><br><br>
+    <!--postal code--->
+    <label>Postal Code:</label>
+    <input type="tel" id="postal_code" name="postal code" maxlength="6" placeholder="6 digits"><br><br>
+    <!--submit button--->
+    <button type="submit">Register</button>
+</form>
+</div>
+</body>
+</html>
