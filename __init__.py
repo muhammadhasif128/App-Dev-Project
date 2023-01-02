@@ -1,78 +1,46 @@
-from flask import run, get, view, post, request, redirect, response
-import uuid
-
-# REDIS, MYSQL/MARIADB, SQLITE, MONGODB
-users = [
-  {
-    "id":"1",
-    "name":"a",
-    "last_name":"aa",
-    "email":"a@a.com",
-    "password":"pass1"
-  },
-  {
-    "id":"2",
-    "name":"b",
-    "last_name":"bb",
-    "email":"b@b.com",
-    "password":"pass2"
-  },
-]
-
-sessions = {}
+from flask import Flask, render_template, request, redirect, url_for
 
 
-##############################
-@get("/login")
-@view("login")
-def _():
-  return
+app = Flask(__name__)
 
-##############################
-@get("/admin")
-@view("admin")
-def _():
-  response.set_header("Cache-Control", "no-cache, no-store, must-revalidate")
-  response.add_header("Pragma", "no-cache")
-  user_session_id = request.get_cookie("user_session_id")
-  print("#"*30)
-  print("admin")
-  print(user_session_id)
-  if not user_session_id:
-    return redirect("/login")
-  if user_session_id not in sessions:
-    return redirect("/login")
-  user = sessions[user_session_id]
-  return dict(user=user)
+formData ={}
 
-##############################
-@get("/logout")
-def _():
-  user_session_id = request.get_cookie("user_session_id")
-  sessions.pop(user_session_id)
-  # Delete the cookies from the browser
-  response.set_cookie("user_session_id", "", expires=0)
-  print("#"*30)
-  print("logout")
-  print(user_session_id)
-  print(sessions)
-  return redirect("/login")
+@app.route('/')
+def home():
+    return render_template('LoginPage.html')
 
-##############################
-@post("/login")
-def _():
-  user_email = request.forms.get("user_email")
-  user_password = request.forms.get("user_password")
-  for user in users:
-    if user_email == user["email"] and user_password == user["password"]:
-      user_session_id = str(uuid.uuid4())
-      sessions[user_session_id] = user
-      print("#"*30)
-      print(sessions)
-      response.set_cookie("user_session_id", user_session_id)
-      return redirect("/admin")
+@app.route('/userpage')
+def user():
+    return render_template('index.html')
 
-  return redirect("/login")
 
-##############################
-run(host="127.0.0.1", port=3333, debug=True, reloader=True)
+@app.route("/form", methods=['POST', 'GET'])
+def userreg():
+    if request.method == 'POST':
+        lastName = request.form['lname']
+        firstName = request.form['fname']
+        formData['lastName'] = lastName
+        formData['firstName'] = firstName
+        return redirect(url_for('output'))
+    else:
+        return render_template('form.html')
+
+
+@app.route("/output")
+def output():
+    return render_template('output.html', name=formData['firstName'])
+
+@app.route('/forget')
+def forget():
+    return render_template('password.html')
+
+@app.route('/admin')
+def admin():
+    return render_template('AdminLogin.html')
+
+@app.route('/adminpage')
+def adminpage():
+    return render_template('AdminHomePage.html')
+
+if __name__ == '__main__':
+    app.run()

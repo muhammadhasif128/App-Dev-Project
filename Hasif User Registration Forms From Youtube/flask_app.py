@@ -20,7 +20,7 @@ def home():
         formData['firstName'] = firstName
         return redirect(url_for('output'))
     else:
-        return render_template('home.html')
+        return render_template('form.html')
 
 
 @app.route("/output")
