@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}FastBurg - User Registration{% endblock %}
+{% block content %}
+<h1 class="display-4">Retrieve Users</h1>
+
+<div>
+    {% if count == 0 %}
+    <p>There are no users.</p>
+    {% elif count == 1 %}
+    <p>There is 1 user.</p>
+    {% else %}
+    <p>There are {{ count }} users.</p>
+    {% endif %}
+</div>
+
+<div>
+ <table class="table table-striped">
+ <thead>
+    <tr>
+        <th>User ID</th>
+        <th>Reg Date</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Postal Code</th>
+        <th>Account Status</th>
+        <th></th>
+        <th></th>
+    </tr>
+ </thead>
+
+ <tbody>
+    {% for user in users_list %}
+    <tr>
+        <td>{{ user.get_user_id() }}</td>
+        <td>{{ user.get_today_date() }}</td>
+        <td>{{ user.get_first_name() }}</td>
+        <td>{{ user.get_last_name() }}</td>
+        <td>{{ user.get_gender() }}</td>
+        <td>{{ user.get_age() }}</td>
+        <td>{{ user.get_phone_no() }}</td>
+        <td>{{ user.get_email_address() }}</td>
+        <td>{{ user.get_postal_code() }}</td>
+        <td>{{ user.get_account_status() }}</td>
+        <td><a href="/updateUser/{{user.get_user_id()}}" class="btn btn-warning">Update</a></td>
+        <td> <form action="{{url_for('delete_user', id=user.get_user_id())}}" method="POST">
+            <!-- Button to Open the Modal -->
+            <button type="button"  class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{user.get_user_id()}}">
+                Delete
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal_{{user.get_user_id()}}">
+                <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Delete Confirmation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    Are you sure you want to delete {{user.get_first_name()}} {{user.get_last_name()}}?
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+ </tbody>
+
+ </table>
+</div>
+
+{% endblock %}
