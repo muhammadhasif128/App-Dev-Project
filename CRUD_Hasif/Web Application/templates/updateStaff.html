@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}FastBurg - User Registration{% endblock %}
+{% block title %}FastBurg - Staff Update{% endblock %}
 
 {% block content %}
 {% from "includes/_formHelper.html" import render_field %}
@@ -8,7 +8,7 @@
   .form-control {border-radius : 10px}
 </style>
 
-<h1 class="display-4" style="font-family: Sans-Serif; text-align: center; color: white">Staff Registration</h1>
+<h1 class="display-4" style="font-family: Sans-Serif; text-align: center; color: white">Update Staff</h1>
 <hr>
 
 <form method="POST" style="width: 40%; margin: 0 auto">
@@ -36,7 +36,7 @@
 
   </div>
   <div style="font-family: Sans-Serif; text-align: center; margin-top: 30px">
-  <input type="submit" value="Register Account" class="btn btn-primary" />
+  <input type="submit" value="Update Staff" class="btn btn-primary" />
   </div>
 </form>
 {% endblock %}
