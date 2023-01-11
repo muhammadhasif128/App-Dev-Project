@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}FastBurg - User Registration{% endblock %}
+{% block content %}
+<h1 class="display-4">FastBurg Menu</h1>
+
+<!---<div>
+    {% if count == 0 %}
+    <p>There are no staff.</p>
+    {% elif count == 1 %}
+    <p>There is 1 staff.</p>
+    {% else %}
+    <p>There are {{ count }} staff.</p>
+    {% endif %}
+</div>--->
+
+<div>
+ <table class="table table-striped">
+ <thead>
+    <tr>
+        <th>Food Number</th>
+        <th>Food Type</th>
+        <th>Food Name</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+ </thead>
+
+ <tbody>
+    {% for food in food_list %}
+    <tr>
+        <td>{{ food.get_food_id() }}</td>
+        <td>{{ food.get_food_type() }}</td>
+        <td>{{ food.get_name() }}</td>
+        <td>{{ food.get_price() }}</td>
+        <td><img width="100" height="100" src="{{ url_for('static', filename=food.get_image())}}"></td>
+        <td><a href="/updateFood/{{food.get_food_id()}}" class="btn btn-warning">Update</a></td>
+        <td> <form action="{{url_for('delete_food', id=food.get_food_id())}}" method="POST">
+            <button type="button"  class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{food.get_food_id()}}">
+                Delete
+            </button>
+
+            <div class="modal" id="myModal_{{food.get_food_id()}}">
+                <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                    <h4 class="modal-title">Delete Confirmation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    Are you sure you want to delete {{food.get_name()}}?
+                    </div>
+
+                    <div class="modal-footer">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+ </tbody>
+
+ </table>
+</div>
+
+{% endblock %}
+
+
+<!----
+
+        <td> <form action="{{url_for('delete_food', id=food.get_food_id())}}" method="POST">
+            <button type="button"  class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{food.get_food_id()}}">
+                Delete
+            </button>
+
+            <div class="modal" id="myModal_{{admin.get_staff_id()}}">
+                <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                    <h4 class="modal-title">Delete Confirmation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    Are you sure you want to delete {{food.get_name()}}?
+                    </div>
+
+                    <div class="modal-footer">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </td>--->

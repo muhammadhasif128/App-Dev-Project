@@ -1,4 +1,4 @@
-from wtforms import Form, StringField, RadioField, validators, EmailField, DateField, IntegerField
+from wtforms import Form, StringField, RadioField, validators, EmailField, DateField, IntegerField,FloatField
 from datetime import datetime
 
 class CreateUserFrom(Form):
@@ -21,3 +21,9 @@ class CreateAdminForm(Form):
     gender = RadioField('Gender', choices=[("M", "Male"), ("F", "Female")], render_kw={"placeholder": "Enter Your Gender"})
     email_address = EmailField("Email Address", [validators.InputRequired()], render_kw={"placeholder": "Enter your email: example@gmail.com"})
     account_status = StringField('Account Status', default="Administrator", render_kw={'readonly': True})
+
+class CreateFoodForm(Form):
+    food_type = RadioField('Category', choices=[("Burger", "Burger"), ("Sides", "Sides"), ("Drinks", "Drinks")])
+    food_name = StringField('Food Name', [validators.Length(min=1, max=50), validators.DataRequired()], render_kw={"placeholder": "Enter First Name"})
+    food_price = FloatField('Price',[validators.NumberRange(min=1, max=100), validators.DataRequired()], render_kw={"placeholder": "Enter Food Price"})
+    image_name = StringField('Image Name', [validators.Length(min=1, max=50), validators.DataRequired()], render_kw={"placeholder": "Enter Image"})

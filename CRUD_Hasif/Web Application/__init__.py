@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
-from Forms import CreateUserFrom, CreateAdminForm
+from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm
 import shelve
 import User
 import Admin
+import Menu
 
 app = Flask(__name__)
 
@@ -43,6 +44,89 @@ def create_user():
 
         return redirect(url_for('successreg'))
     return render_template('createUser.html', form=create_user_form)
+
+@app.route('/createFood', methods=['GET','POST'])
+def create_food():
+    create_food_form = CreateFoodForm(request.form)
+    if request.method == 'POST' and create_food_form.validate():
+        food_dict = {}
+        db = shelve.open('food.db', 'c')
+
+        try:
+            food_dict = db['Food']
+        except:
+            print("Error in retrieving Food from food.db.")
+
+        food = Menu.Food(create_food_form.food_type.data, create_food_form.food_name.data,
+                         create_food_form.food_price.data,
+                         create_food_form.image_name.data)
+        food_dict[food.get_food_id()] = food
+        db['Food'] = food_dict
+
+        food_dict = db['Food']
+        food = food_dict[food.get_food_id()]
+        print(food.get_name(), "was stored in food.db successfully with food_id ==", food.get_food_id())
+
+        db.close()
+        return redirect(url_for('home'))
+    return render_template('createFood.html', form=create_food_form)
+
+@app.route('/retrieveFood')
+def retrieve_food():
+    food_dict = {}
+    db = shelve.open('food.db', 'r')
+    food_dict = db['Food']
+    db.close()
+
+    food_list = []
+    for key in food_dict:
+        food = food_dict.get(key)
+        food_list.append(food)
+
+    return render_template('retrieveFood.html', count=len(food_list), food_list=food_list)
+
+
+@app.route('/deleteFood/<int:id>', methods=['POST'])
+def delete_food(id):
+    food_dict = {}
+    db = shelve.open('food.db', 'w')
+    food_dict = db['Food']
+    food_dict.pop(id)
+    db['Food'] = food_dict
+    db.close()
+    return redirect(url_for('retrieve_food'))
+
+
+@app.route('/updateFood/<int:id>/', methods=['GET', 'POST'])
+def update_food(id):
+    update_food_form = CreateFoodForm(request.form)
+    if request.method == 'POST' and update_food_form.validate():
+        food_dict = {}
+        db = shelve.open('food.db', 'w')
+        food_dict = db['Food']
+
+        food = food_dict.get(id)
+        food.set_food_type(update_food_form.food_type.data)
+        food.set_name(update_food_form.food_name.data)
+        food.set_price(update_food_form.food_price.data)
+        food.set_image(update_food_form.image_name.data)
+
+        db['Food'] = food_dict
+        db.close()
+
+        return redirect(url_for('retrieve_food'))
+    else:
+        food_dict = {}
+        db = shelve.open('food.db', 'r')
+        food_dict = db['Food']
+        db.close()
+        food = food_dict.get(id)
+        update_food_form.food_type.data = food.get_food_type()
+        update_food_form.food_name.data = food.get_name()
+        update_food_form.food_price.data = food.get_price()
+        update_food_form.image_name.data = food.get_image()
+
+        return render_template('updateFood.html', form=update_food_form)
 
 
 @app.route('/successreg', methods=['GET', 'POST'])
