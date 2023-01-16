@@ -114,64 +114,12 @@
         </style>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav shadow navbar navbar-expand navbar-dark bg-light">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3 ps-lg-5" href="index.html" style = 'color : #363d47' >FastBurg</a>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 " id="sidebarToggle"><i class="fas fa-bars" style = 'color:rgba(33, 40, 50, 0.5)'></i></button>
-            <!-- Navbar Search-->
-            <span class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"></span>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 ">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw" style = 'color:rgba(33, 40, 50, 0.5) !important'></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="/admin">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    {% block navbar %}
+        {% include 'includes/_navbar.html'%}
+    {% endblock %}
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav shadow-right accordion sb-sidenav-dark" id="sidenavAccordion" style = 'background-color : #272f3b'>
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
 
-                                <a class="nav-link" href="#collapseDashboards" data-bs-toggle="collapse">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                <div class = 'ps-lg-1 text-light'>Dashboard</div>
-                                <i class = "fas fa-angle-right ps-lg-5" style = 'font-size : 12px'></i>
-                            </a>
-                            <div class = 'collapse' id = 'collapseDashboards'>
-                                <nav class = 'nested-items'>
-                                    <a class = 'nav-link' href = '#'>Item 1</a>
-                                    <a class = 'nav-link' href = '#'>Item 2</a>
-                                    <a class = 'nav-link' href = '#'>Item 3</a>
-                                </nav>
-                            </div>
-
-                            <div class="sb-sidenav-menu-heading">Support</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                <div class = 'ps-lg-1'>Layouts</div>
-                                <div class="sb-sidenav-collapse-arrow"></div>
-                            </a>
-
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            </div>
-                            </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        {{user}}
-                    </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
+            <div id="layoutSidenav_content" style="margin-left:-225px;">
                 <main>
                     <header class = 'bg-primary pb-10'>
                         <div class="container welcome-sizing">
@@ -183,13 +131,7 @@
                     </header>
                     <div class='container-fluid mt-4'>
                         <div class="card border-light shadow-sm text-center">
-                          <div class="card-header">
-                            <ul class="nav nav-pills card-header-pills">
-                              <li class="nav-item"><a class="nav-link active" href="#">Staffs</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
-                              <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
-                             </ul>
-                           </div>
+
                           <div class="card-body">
                               <div class="row row-cols-1 row-cols-md-3 g-4">
 
@@ -206,7 +148,7 @@
                                       <div class="card" style = 'background-color : whitesmoke;'>
                                   <div class="card-body">
                                       <h5 class="card-title">Manage User Accounts</h5>
-                                      <p class="card-text">Update/Delete or view newly<br> created accounts</p><button type="button" class="btn btn-primary">Take Me There</button>
+                                      <p class="card-text">Update/Delete or view newly<br> created accounts</p><a href="/adminusers"><button type="button" class="btn btn-primary">Take me there</button></a>
                                    </div>
                                  </div>
                                </div>
@@ -230,84 +172,72 @@
                     <div class = 'container-fluid mt-4 mb-4'>
                         <div class = 'card'>
                             <div class = 'card-body'>
-<table class="table">
-    <tbody>
-      <tr class = 'faketablehead'>
-        <td>Name</td>
-        <td>Title</td>
-        <td>Status</td>
-        <td>Role</td>
-          <td></td>
-      </tr>
 
-      <tr>
+<table class="table table-striped">
+ <thead>
+    <tr>
+        <th>Staff ID</th>
+        <th>Reg Date</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+    </tr>
+ </thead>
 
-        <td class = 'people'>
-                <h5>John Doe</h5>
-                <p>john@example.com</p>
+ <tbody>
+    {% for admin in admin_list %}
+    <tr>
+        <td>{{ admin.get_staff_id() }}</td>
+        <td>{{ admin.get_today_date() }}</td>
+        <td>{{ admin.get_first_name() }}</td>
+        <td>{{ admin.get_last_name() }}</td>
+        <td>{{ admin.get_gender() }}</td>
+        <td>{{ admin.get_age() }}</td>
+        <td>{{ admin.get_phone_no() }}</td>
+        <td>{{ admin.get_email_address() }}</td>
+        <td><a href="/updateStaff/{{admin.get_staff_id()}}" class="btn btn-warning">Update</a></td>
+        <td> <form action="{{url_for('delete_staff', id=admin.get_staff_id())}}" method="POST">
+            <!-- Button to Open the Modal -->
+            <button type="button"  class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{admin.get_staff_id()}}">
+                Delete
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal_{{admin.get_staff_id()}}">
+                <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Delete Confirmation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    Are you sure you want to delete {{admin.get_first_name()}} {{admin.get_last_name()}}?
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+                </div>
+            </div>
         </td>
+    </tr>
+    {% endfor %}
+ </tbody>
 
-        <td class = 'people-des'>
-            <h5>Software Engineer</h5>
-            <p>Web Developer</p>
-        </td>
-
-          <td class = 'active'><p>Active</p></td>
-
-          <td class = 'role'>
-              <p>Owner</p>
-          </td>
-
-          <td class = 'edit'><a class = 'nav-link mt-1' href = '#'>Edit</a></td>
-
-      </tr>
-
-     <tr>
-
-        <td class = 'people'>
-                <h5>John Doe</h5>
-                <p>john@example.com</p>
-        </td>
-
-        <td class = 'people-des'>
-            <h5>Software Engineer</h5>
-            <p>Web Developer</p>
-        </td>
-
-          <td class = 'active'><p>Active</p></td>
-
-          <td class = 'role'>
-              <p>Owner</p>
-          </td>
-
-          <td class = 'edit'><a class = 'nav-link mt-1' href = '#'>Edit</a></td>
-
-      </tr>
-
-     <tr>
-
-        <td class = 'people'>
-                <h5>John Doe</h5>
-                <p>john@example.com</p>
-        </td>
-
-        <td class = 'people-des'>
-            <h5>Software Engineer</h5>
-            <p>Web Developer</p>
-        </td>
-
-          <td class = 'active'><p>Active</p></td>
-
-          <td class = 'role'>
-              <p>Owner</p>
-          </td>
-
-          <td class = 'edit'><a class = 'nav-link mt-1' href = '#'>Edit</a></td>
-
-      </tr>
-
-    </tbody>
-</table>
+ </table>
                             </div>
                         </div>
                     </div>
