@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
-from Forms import CreateUserFrom, CreateAdminForm, TopUpUserForm, CreateCardForm, RefillCardForm
-from random import randint
+from Forms import CreateUserFrom, TopUpUserForm, CreateCardForm, RefillCardForm
 import random,string
 import shelve
 import User
-import Admin
 import Card
 
 
@@ -103,7 +101,7 @@ def create_card():
             print("Error in retrieving Users from card.db.")
 
 
-        card = Card.Card(create_card_form.name.data, digitcode, create_card_form.date_created.data, create_card_form.lifespan.data,create_card_form.expiry_date.data,create_card_form.email_address.data)
+        card = Card.Card(create_card_form.name.data, digitcode, create_card_form.date_created.data, create_card_form.lifespan.data, create_card_form.expiry_date.data, create_card_form.email_address.data)
         card_dict[card.get_counter()] = card
         db['Card'] = card_dict
 
