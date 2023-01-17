@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Changes made 2nd Jan">
-      <change afterPath="$PROJECT_DIR$/templates/base2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/Admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/admin.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/admin.db.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/admin.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/admin.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/admin.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/admin.db.dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/food.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/food.db.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/food.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/food.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/food.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/food.db.dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/static/burger1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/burger1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/createAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/createFood.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createFood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/createUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/includes/_formHelper.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_formHelper.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/retrieveFood.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retrieveFood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/retrieveStaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retrieveStaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/retrieveUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retrieveUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/updateFood.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/updateFood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/updateStaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/updateStaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/templates/updateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/updateUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/user.db.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/user.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD_Hasif/Web Application/user.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/user.db.dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/AdminHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/AdminHomePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-    </list>
+    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Updated on 16th Jan" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -240,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672646930378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated on 16th Jan">
+      <created>1673858690814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673858690814</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,6 +228,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes made 2nd Jan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes made 2nd Jan" />
+    <MESSAGE value="Updated on 16th Jan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated on 16th Jan" />
   </component>
 </project>
