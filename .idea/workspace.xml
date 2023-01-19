@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Changes made 2nd Jan">
+    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Changes made 19nd Jan">
       <change beforePath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/Card.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/card.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/card.db.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/card.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/card.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/card.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/card.db.dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/templates/CreateCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CreateCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/templates/refillCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/refillCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/templates/retrieveCardInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retrieveCardInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/templates/topUpUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/topUpUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card_Making_Ryan/Web Application/templates/updateCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/updateCard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/admin.db.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/admin.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/admin.db.dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/AdminHomePageUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/AdminHomePageUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/LoginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/createUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/user.db.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/user.db.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/user.db.dir" afterDir="false" />
@@ -46,6 +29,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -54,14 +45,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Student/Desktop/Modules/IT1666 App Development Project/App-Dev-Project/templates"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\templates" />
@@ -75,7 +64,7 @@
       <recent name="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\flask_experimental" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__ (2)">
+  <component name="RunManager" selected="Python.init (1)">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,19 +128,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="init2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="init (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\pyflask\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\pythonProject\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\init2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/init.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="init" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -172,7 +161,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\init.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,19 +171,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.__init__ (2)" />
-      <item itemvalue="Python.run" />
       <item itemvalue="Python.__init__ (1)" />
+      <item itemvalue="Python.__init__ (2)" />
       <item itemvalue="Python.__init__" />
-      <item itemvalue="Python.init2" />
+      <item itemvalue="Python.init (1)" />
+      <item itemvalue="Python.init" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.init (1)" />
+        <item itemvalue="Python.init" />
         <item itemvalue="Python.__init__ (2)" />
-        <item itemvalue="Python.run" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.init2" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672646930378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changes made 19nd Jan">
+      <created>1674095921261</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674095921261</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +226,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes made 2nd Jan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes made 2nd Jan" />
+    <MESSAGE value="Changes made 19nd Jan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes made 19nd Jan" />
   </component>
 </project>

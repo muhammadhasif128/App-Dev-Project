@@ -13,8 +13,8 @@
 
 <h1 class="display-4" style="font-family: Sans-Serif; text-align: center; color: white">User Registration</h1>
 <hr>
-
-<form method="POST" style="width: 40%; margin: 0 auto">
+{{typo}}
+<form method="POST" action="/validateUsers" style="width: 40%; margin: 0 auto">
   <div class="form-group">
    {{ render_field(form.first_name, class="form-control") }}
   </div>
@@ -48,6 +48,8 @@
   </div>
   <div style="font-family: Sans-Serif; text-align: center; margin-top: 30px">
   <input type="submit" value="Register Account" id="finalsubmit" class="btn btn-primary" disabled/>
+            <a href ="/adminpage"><input value="Back" class="btn btn-primary"></a>
+
   </div>
 </form>
 {% endblock %}

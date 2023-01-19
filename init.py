@@ -20,7 +20,6 @@ def home():
 def user():
     return render_template('index.html')
 
-
 @app.route('/adminusers')
 def adminusers():
     users_dict = {}
@@ -102,7 +101,7 @@ def create_user():
 
         db.close()
 
-        return redirect(url_for('successreg'))
+        return redirect(url_for('adminusers'))
     return render_template('createUser.html', form=create_user_form)
 
 @app.route('/userRegister', methods=['GET', 'POST'])
@@ -538,6 +537,9 @@ def delete_card(id):
     db['Card'] = card_dict
     db.close()
     return redirect(url_for('retrieve_card'))
+
+
+
 
 if __name__ == '__main__':
     app.run()
