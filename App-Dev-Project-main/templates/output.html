@@ -1,16 +1,12 @@
-<!---under template directory--->
-<!--- user validation--->
+{% extends "base.html" %}
+{% block title %}FastBurg - Home{% endblock %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>output</title>
-</head>
-<body>
-<h2 align="center">Thank you {{name }} for registering</h2>
+<h2 class="display-4" align="center" style="margin-top: 200px; font-family: 'Poppins', sans-serif; font-size: 40px"><strong>Thank you {{registeredname}} for registering</strong></h2>
 <br>
-<h2 align="center">Your account has been created and can be used. Please return to the homepage to log onto our system</h2>
-<button type="submit"><a href="/">Return to Homepage</a></button>
-</body>
-</html>
+<p align="center" style="font-size: 20px;">Admin Account has been created and can be used. Please return to the homepage to log onto our system</p>
+<button type="submit" style="margin-left: 600px; border-radius: 8px; display: inline-block; border: none; color: white; padding: 15px 32px; margin-top: 20px; font-family: 'Poppins', sans-serif;"><a style=" text-decoration: none; font-style: italic;" href="/adminpage">Return to Homepage</a></button>
+
+
+{% endblock %}
+
