@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Split the screen in half */
+        .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+
+        /* Control the left side */
+        .left {
+        left: 0;
+        background-color: #111;
+        }
+
+        /* Control the right side */
+        .right {
+        right: 0;
+        background-color: red;
+        }
+
+        /* If you want the content centered horizontally and vertically */
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        }
+
+        /* Style the image inside the centered container, if needed */
+        .centered img {
+        width: 150px;
+        border-radius: 50%;
+        }
+
+        .login-form {
+            .login-container {
+                width: 400px;
+                margin: 100px auto;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .login-form {
+                padding: 20px;
+            }
+
+            .form-control {
+                display: block;
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #3498db;
+            }
+
+            .btn {
+                background-color: #3498db;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background-color: #2980b9;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="split left">
+        <div class="centered">
+          <img src="img_avatar2.png" alt="Avatar woman">
+          <h2>Jane Flex</h2>
+          <p>Some text.</p>
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered">
+            <div class="login-container">
+                <form class="login-form">
+                  <h1>Login</h1>
+                  <input type="text" class="form-control" placeholder="Username" required>
+                  <input type="password" class="form-control" placeholder="Password" required>
+                  <button type="submit" class="btn">Log In</button>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

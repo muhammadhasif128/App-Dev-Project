@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Changes made 19nd Jan">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/AdminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/AdminLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/LoginPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +38,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mhasi/Downloads/App-Dev-Project-main-HoldenEdit&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/mhasi"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\templates" />
@@ -161,11 +163,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.run" />
       <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.__init__ (2)" />
       <item itemvalue="Python.init (1)" />
       <item itemvalue="Python.init" />
-      <item itemvalue="Python.run" />
     </list>
     <recent_temporary>
       <list>

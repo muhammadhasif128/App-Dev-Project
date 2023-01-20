@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}FastBurg - Feedback page{% endblock %}
+{% block content %}
+<h1 class="display-4">Retrieve reports</h1>
+
+<div>
+    {% if count == 0 %}
+    <p>There are no feedback.</p>
+    {% elif count == 1 %}
+    <p>There is 1 feedback/report.</p>
+    {% else %}
+    <p>There are {{ count }} feedback/report.</p>
+    {% endif %}
+</div>
+
+<div>
+ <table class="table table-striped">
+ <thead>
+    <tr>
+        <th>Report ID</th>
+        <th>User ID</th>
+        <th>User's Name</th>
+        <th>Email address</th>
+        <th>Message</th>
+        <th>Actions</th>
+        <th></th>
+        <th></th>
+    </tr>
+ </thead>
+
+ <tbody>
+    {% for admin in report_list %}
+    <tr>
+        <td>{{ admin.get_report_id() }}</td>
+        <td>{{ admin.get_today_date() }}</td>
+        <td>{{ admin.get_User_id() }}</td>
+        <td>{{ admin.get_User_name() }}</td>
+        <td>{{ admin.get_email() }}</td>
+        <td>{{ admin.get_message() }}</td>
+        <td><a href="/retrieveReports/{{admin.get_report_id()}}" class="btn btn-warning">Update</a></td>
+        <td> <form action="{{url_for('delete_feedback', id=admin.get_report_id())}}" method="POST">
+            <!-- Button to Open the Modal -->
+            <button type="button"  class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{admin.get_staff_id()}}">
+                Delete
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal_{{admin.get_report_id()}}">
+                <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Delete Confirmation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    Are you sure you want to delete {{admin.get_User_name()}}?
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            </td>
+    </tr>
+    {% endfor %}
+ </tbody>
+
+ </table>
+</div>
+
+{% endblock %}
+
+

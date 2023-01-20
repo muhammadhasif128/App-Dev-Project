@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}FastBurg - Home{% endblock %}
+{% block content %}
+
+<h1 class="display-4" style="text-align: center; color:white; margin-top: 300px; font-size:60px; font-style: italic"><strong>Thank you {{registeredname}} for registering.</strong></h1>
+<br>
+<h2 align="center">Your account has been created and can be used. Please return back to the homepage to login to our system.</h2>
+<br>
+
+<div style="font-family: Sans-Serif; text-align: center; margin-top: 30px">
+  <form method="POST">
+    <input type="submit" value="Return to homepage" class="btn btn-primary"/></a>
+  </form>
+</div>
+
+{% endblock %}

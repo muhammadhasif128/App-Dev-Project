@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>User Homepage</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+        <style>
+            .nested-items {
+              margin-left : 1.4rem;
+              border-left-style : solid;
+              border-left-width : thin;
+              border-left-color : rgba(255, 255, 255, 0.15);
+              padding-left : 0.55rem;
+            }
+
+            .pb-10 {
+            padding-bottom : 4rem;
+            }
+
+            .header-title, .subtitle {
+             color : whitesmoke;
+             padding-top : 4rem;
+            }
+
+            #dashboardstyling {
+             color : rgba(255, 255, 255, 0.5)
+            }
+
+            header {
+              background-color: #0093E9;
+              background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            }
+
+            body {
+              background-color : #E5E7EB;
+            }
+
+            .welcome-sizing {
+              padding-left : 6rem;
+            }
+
+            .user-icon-font {
+              padding: 1rem;
+              background-color : #7B73EC;
+              width: 2rem;
+              height: 2rem;
+              line-height: 2rem;
+              border-radius : 50%;
+              color: white;
+            }
+
+             .staff-icon-font {
+              padding: 1rem;
+              width: 2rem;
+              height: 2rem;
+              line-height: 2rem;
+              border-radius : 50%;
+              color: white;
+              }
+
+              table h5 {
+                font-weight : 600;
+                font-size : 14px;
+              }
+
+               table p {
+                font-weight : 400;
+                font-size : 13px;
+                color : #787d8d;
+              }
+
+              table {
+               border-collapse : collapse;
+              }
+
+              .faketablehead td {
+               font-size : 14px;
+               text-transform : uppercase;
+               font-weight : 400;
+               background : #F9FAFB;
+               text-align : start;
+               padding : 15px;
+              }
+
+              table .active p{
+               margin-top : 10px;
+               padding : 2px 10px;
+               background : #d7fada;
+               display : inline-block;
+               border-radius : 40px;
+               color : #2b2b2b2 !important;
+              }
+
+              .role p {
+               margin-top : 10px;
+               padding : 2px 10px;
+               display : inline-block;
+              }
+
+              .people h5, .people-des h5{
+                margin-top : 5px;
+               }
+
+
+
+
+        </style>
+    </head>
+    {% block content %}
+    <body class="sb-nav-fixed">
+    {% block navbar %}
+        {% include 'includes/_navbar.html' %}
+    {% endblock %}
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+
+            </div>
+            <div id="layoutSidenav_content" style="margin-left:-225px;">
+                <main>
+                    <header class = 'bg-primary pb-10'>
+                        <div class="container welcome-sizing">
+                        <h1 class = 'header-title'>Welcome, {{user}}Name Of Admin</h1>
+                        <ol class="breadcrumb mt-2">
+                            <li class="active" id = 'dashboardstyling'>Admin Dashboard</li>
+                        </ol>
+                        </div>
+                    </header>
+                    <div class='container-fluid mt-4'>
+                        <div class="card border-light shadow-sm text-center">
+
+                          <div class="card-body">
+                              <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                                  <div class="col">
+                                      <div class="card" style = 'background-color : whitesmoke;'>
+                                  <div class="card-body">
+                                      <h5 class="card-title">Manage Staff Accounts</h5>
+                                      <p class="card-text">View staff information</p><a href="/adminpage"><button type="button" class="btn btn-primary">Take Me There</button></a>
+                                   </div>
+                                 </div>
+                               </div>
+
+                                  <div class="col">
+                                      <div class="card border-primary bg-primary text-light" >
+                                  <div class="card-body p-5">
+                                      <h5 class="card-title">Manage User Accounts</h5>
+                                      <p class="card-text">Currently on this page</p>
+
+                                   </div>
+                                 </div>
+                               </div>
+
+
+                                  <div class="col">
+                                      <div class="card" style = 'background-color : whitesmoke;'>
+                                  <div class="card-body">
+                                      <h5 class="card-title">View Reports</h5>
+                                      <p class="card-text">Sort out complaints and reports from customers</p><button type="button" class="btn btn-primary">Take Me There</button>
+                                   </div>
+                                 </div>
+                               </div>
+
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+
+<h3 class = 'nav-link mt-5 mx-4 text-dark'>User Database</h3>
+                    <div class = 'container-fluid mt-4 mb-4'>
+                        <div class = 'card'>
+                            <div class = 'card-body'>
+
+<div>
+ <table class="table table-striped">
+ <thead>
+    <tr>
+        <th>User ID</th>
+        <th>Reg Date</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Postal Code</th>
+        <th>Account Status</th>
+        <th></th>
+        <th></th>
+    </tr>
+ </thead>
+
+ <tbody>
+    {% for user in users_list %}
+    <tr>
+        <td>{{ user.get_user_id() }}</td>
+        <td>{{ user.get_today_date() }}</td>
+        <td>{{ user.get_first_name() }}</td>
+        <td>{{ user.get_last_name() }}</td>
+        <td>{{ user.get_gender() }}</td>
+        <td>{{ user.get_age() }}</td>
+        <td>{{ user.get_phone_no() }}</td>
+        <td>{{ user.get_email_address() }}</td>
+        <td>{{ user.get_postal_code() }}</td>
+        <td>{{ user.get_account_status() }}</td>
+        <td><a href="/updateUser/{{user.get_user_id()}}" class="btn btn-warning">Update</a></td>
+        <td> <form action="{{url_for('delete_user', id=user.get_user_id())}}" method="POST">
+            <!-- Button to Open the Modal -->
+            <button type="button"  class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{user.get_user_id()}}">
+                Delete
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal_{{user.get_user_id()}}">
+                <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Delete Confirmation</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    Are you sure you want to delete {{user.get_first_name()}} {{user.get_last_name()}}?
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            </td>
+    </tr>
+    {% endfor %}
+ </tbody>
+
+ </table>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                  </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatea-demoables@latest" crossorigin="anonymous"></script>
+    </body>
+</html>
+{% endblock %}
