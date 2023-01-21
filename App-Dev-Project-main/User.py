@@ -5,7 +5,7 @@ import shelve
 class User:
     count_id = 0
 
-    def __init__(self, first_name, last_name, today_date, age, phone_no, gender, email_address, postal_code, account_status):
+    def __init__(self, first_name, last_name, today_date, age, phone_no, gender, email_address, password, postal_code, account_status):
         self.__user_id = User.count_id
         User.count_id += 1
         self.__first_name = first_name
@@ -17,8 +17,8 @@ class User:
         self.__email_address = email_address
         self.__postal_code = postal_code
         self.__account_status = account_status
+        self.__password = password
 
-    # get
 
     def get_user_id(self):
         return self.__user_id
@@ -49,6 +49,9 @@ class User:
 
     def get_account_status(self):
         return self.__account_status
+
+    def get_password(self):
+        return self.__password
 
     # set
 
@@ -81,5 +84,8 @@ class User:
 
     def set_account_status(self, account_status):
         self.__account_status = account_status
+
+    def set_password(self,pw):
+        self.__password = pw
 
 

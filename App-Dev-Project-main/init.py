@@ -7,6 +7,7 @@ import Menu
 import random,string
 import Card
 import GetUpdated_ID
+import hashlib
 
 
 app = Flask(__name__)
@@ -120,8 +121,10 @@ def create_user():
         user = User.User(create_user_form.first_name.data, create_user_form.last_name.data,
                          create_user_form.today_date.data, create_user_form.age.data, create_user_form.phone_no.data,
                          create_user_form.gender.data, create_user_form.email_address.data,
-                         create_user_form.postal_code.data, "Default")
+                         create_user_form.user_password.data,create_user_form.postal_code.data, "Default")
         user.set_user_id(GetUpdated_ID.Ufunction()+1)
+        # hashlib.md5(user.set_password(user.get_password().encode()))
+        # hashlib.md5(user.get_password().encode())
         users_dict[user.get_user_id()] = user
         db['Users'] = users_dict
 

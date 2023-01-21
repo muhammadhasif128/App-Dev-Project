@@ -2,7 +2,10 @@ import shelve
 
 admin_dict = {}
 dbA = shelve.open('admin.db', 'r')
-admin_dict = dbA['Staff']
+try:
+    admin_dict = dbA['Staff']
+except:
+    print("Error retrieving users in admin.db")
 
 # for key in users_dict:
 #     user = users_dict.get(key)
@@ -19,9 +22,10 @@ def Sfunction():
 
 users_dict = {}
 dbU = shelve.open('user.db', 'r')
-users_dict = dbU['Users']
-
-users_list = []
+try:
+    users_dict = dbU['Users']
+except:
+    print("error in users")
 
 
 uList = []

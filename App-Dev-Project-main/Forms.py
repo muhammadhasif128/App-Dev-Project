@@ -1,4 +1,4 @@
-from wtforms import Form, StringField, RadioField, validators, EmailField, DateField, IntegerField,FloatField
+from wtforms import Form, StringField, RadioField, validators, EmailField, DateField, IntegerField,FloatField, PasswordField
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
@@ -12,6 +12,7 @@ class CreateUserFrom(Form):
     email_address = EmailField("Email Address", [validators.InputRequired()], render_kw={"placeholder": "Enter your email, eg:. example@gmail.com"})
     postal_code = IntegerField("Postal Code", [validators.NumberRange(min=0, max=999999)], render_kw={"placeholder": "Enter your 6 digit postal code"})
     account_status = StringField('Account Status', default="Administrator", render_kw={'readonly': True})
+    user_password = PasswordField('Password',[validators.Length(min=8, max=50), validators.DataRequired()], render_kw={"placeholder": "Enter Password"})
 
 class CreateAdminForm(Form):
     first_name = StringField('First Name', [validators.InputRequired(),validators.Length(min=1, max=50), validators.DataRequired()], render_kw={"placeholder": "Enter First Name"})
@@ -22,6 +23,8 @@ class CreateAdminForm(Form):
     gender = RadioField('Gender', choices=[("M", "Male"), ("F", "Female")], render_kw={"placeholder": "Enter Your Gender"})
     email_address = EmailField("Email Address", [validators.InputRequired(),validators.InputRequired()], render_kw={"placeholder": "Enter your email: example@gmail.com"})
     account_status = StringField('Account Status', default="Administrator", render_kw={'readonly': True})
+    admin_password = PasswordField('Password',[validators.Length(min=8, max=50), validators.DataRequired()], render_kw={"placeholder": "Enter Password"})
+
 
 class CreateFoodForm(Form):
     food_type = RadioField('Category', choices=[("Burger", "Burger"), ("Sides", "Sides"), ("Drinks", "Drinks")])
