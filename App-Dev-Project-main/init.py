@@ -6,6 +6,7 @@ import Admin
 import Menu
 import random,string
 import Card
+import GetUpdated_ID
 
 
 app = Flask(__name__)
@@ -26,7 +27,6 @@ def adminusers():
     db = shelve.open('user.db', 'r')
     users_dict = db['Users']
     db.close()
-
     users_list = []
     for key in users_dict:
         user = users_dict.get(key)
@@ -121,6 +121,7 @@ def create_user():
                          create_user_form.today_date.data, create_user_form.age.data, create_user_form.phone_no.data,
                          create_user_form.gender.data, create_user_form.email_address.data,
                          create_user_form.postal_code.data, "Default")
+        user.set_user_id(GetUpdated_ID.Ufunction()+1)
         users_dict[user.get_user_id()] = user
         db['Users'] = users_dict
 
@@ -134,7 +135,7 @@ def create_user():
 
         db.close()
 
-        return redirect(url_for('adminusers'))
+        return redirect(url_for('home'))
     return render_template('createUser.html', form=create_user_form)
 
 @app.route('/userRegister', methods=['GET', 'POST'])
@@ -171,7 +172,7 @@ def user_register():
 
 
 
-@app.route('/createFood', methods=['GET','POST'])
+@app.route('/createFood', methods=['GET', 'POST'])
 def create_food():
     create_food_form = CreateFoodForm(request.form)
     if request.method == 'POST' and create_food_form.validate():
@@ -278,6 +279,7 @@ def create_admin():
                             create_admin_form.today_date.data, create_admin_form.age.data,
                             create_admin_form.phone_no.data, create_admin_form.gender.data,
                             create_admin_form.email_address.data)
+        admin.set_staff_id(GetUpdated_ID.Sfunction()+1)
         admin_dict[admin.get_staff_id()] = admin
         db['Staff'] = admin_dict
 

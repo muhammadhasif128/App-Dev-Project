@@ -17,10 +17,12 @@ def afunction():
         user = users_dict.get(key)
         users_list.append(user)
         for i in db[key]:
-            # print(i)
-            # print(users_dict[i])
-            elist.append(bfunction(users_dict[i]))
-        bfunction(users_dict[i])
+            print(i)
+            print(users_dict[i])
+            elist.append(i)
+        #     elist.append(bfunction(users_dict[i]))
+        # bfunction(users_dict[i])
+        print(max(elist))
 
 def bfunction(u):
     return u.get_email_address()

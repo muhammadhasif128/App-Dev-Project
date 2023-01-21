@@ -1,9 +1,13 @@
+import shelve
+
+
+
 class User:
     count_id = 0
 
     def __init__(self, first_name, last_name, today_date, age, phone_no, gender, email_address, postal_code, account_status):
-        User.count_id += 1
         self.__user_id = User.count_id
+        User.count_id += 1
         self.__first_name = first_name
         self.__last_name = last_name
         self.__today_date = today_date

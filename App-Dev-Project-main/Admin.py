@@ -1,4 +1,6 @@
 import User
+import shelve
+
 
 
 class Admin(User.User):
@@ -11,3 +13,7 @@ class Admin(User.User):
 
     def get_staff_id(self):
         return self.__staff_id
+
+    def set_staff_id(self,number):
+        self.__staff_id = number
+
