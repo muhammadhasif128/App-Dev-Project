@@ -14,14 +14,14 @@ app = Flask(__name__)
 
 formData ={}
 
+
+
 @app.route('/', methods=['GET'])
 def home1():
-    print('hom1')
-    return render_template('LoginPage.html')
+    return render_template('LoginPage.html',typo=typo)
 
 @app.route('/', methods=['POST'])
 def home():
-    print('homcheck')
     if request.method == "POST":
         # Get the form data
         email = request.form["email"]
@@ -31,28 +31,34 @@ def home():
         user_dict = db['Users']
         db.close()
         user_list = []
+        aList=[]
+        pList=[]
         for key in user_dict:
             user = user_dict.get(key)
             user_list.append(user)
         for i in user_list:
-            print(i.get_email_address())
-            if str(i.get_email_address()) == str(email):
+            # print(i.get_email_address())
+            # print(i.get_password())
+            aList.append(i.get_email_address())
+            pList.append(i.get_password())
+            if str(i.get_email_address()) == email:
                 global loginname
                 loginname = i.get_first_name()
                 break
-        try:
-            print(loginname)
-        except NameError:
-            print("Invalid Login Email.")
-            return redirect(url_for('home'))
+        # print(aList)
+        # print(pList)
 
         password = request.form["password"]
-        if password == "Fastburg12345!":
-            print("Login Successful")
-            return redirect(url_for('user'))
+        if email in aList:
+            cpass = aList.index(email)
+            if password == pList[cpass]:
+                print("Login Successful")
+                return redirect(url_for('user'))
+            else:
+                return redirect(url_for('home1'))
         else:
-            print("Incorrect Details")
             return redirect(url_for('home1'))
+
 
 @app.route('/userpage')
 def user():
