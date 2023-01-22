@@ -18,7 +18,7 @@ formData ={}
 
 @app.route('/', methods=['GET'])
 def home1():
-    return render_template('LoginPage.html',typo=typo)
+    return render_template('LoginPage.html')
 
 @app.route('/', methods=['POST'])
 def home():
