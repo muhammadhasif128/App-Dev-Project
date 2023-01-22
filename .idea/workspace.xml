@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Changes made 19nd Jan">
-      <change beforePath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
       <recent name="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\flask_experimental" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.init (2)">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Admin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,9 +178,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.init (2)" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.GetUpdated_ID" />
         <item itemvalue="Python.Admin" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.init (1)" />
       </list>
     </recent_temporary>

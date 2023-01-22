@@ -19,18 +19,15 @@ def afunction():
         for i in db[key]:
             print(i)
             print(users_dict[i])
-            elist.append(i)
+            elist.append(users_dict[i].get_email_address())
         #     elist.append(bfunction(users_dict[i]))
         # bfunction(users_dict[i])
-        print(max(elist))
+        print(elist)
 
 def bfunction(u):
     return u.get_email_address()
 
 afunction()
-
-
-print(elist)
 if 'Sample@gmail.com' in elist:
     print('yes')
 else:

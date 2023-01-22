@@ -15,7 +15,7 @@
         {% block navbar %}
         {% include 'includes/_navbar2.html'%}
         {% endblock %}
-        <div id="layoutSidenav">
+        <!---<div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
@@ -35,17 +35,17 @@
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                             </div>
                             </div>
-                    </div>
+                    </div>--->
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        {{user}}
+                        {{loginname}}
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Welcome, {{user}}</h1>
+                        <h1 class="mt-4">Welcome, {{loginname}}</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>

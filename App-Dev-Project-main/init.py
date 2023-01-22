@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm, TopUpUserForm, CreateCardForm, RefillCardForm
 import shelve
 import User
@@ -14,13 +14,51 @@ app = Flask(__name__)
 
 formData ={}
 
-@app.route('/')
-def home():
+@app.route('/', methods=['GET'])
+def home1():
+    print('hom1')
     return render_template('LoginPage.html')
+
+@app.route('/', methods=['POST'])
+def home():
+    print('homcheck')
+    if request.method == "POST":
+        # Get the form data
+        email = request.form["email"]
+
+        user_dict = {}
+        db = shelve.open('user.db', 'r')
+        user_dict = db['Users']
+        db.close()
+        user_list = []
+        for key in user_dict:
+            user = user_dict.get(key)
+            user_list.append(user)
+        for i in user_list:
+            print(i.get_email_address())
+            if str(i.get_email_address()) == str(email):
+                global loginname
+                loginname = i.get_first_name()
+                break
+        try:
+            print(loginname)
+        except NameError:
+            print("Invalid Login Email.")
+            return redirect(url_for('home'))
+
+        password = request.form["password"]
+        if password == "Fastburg12345!":
+            print("Login Successful")
+            return redirect(url_for('user'))
+        else:
+            print("Incorrect Details")
+            return redirect(url_for('home1'))
 
 @app.route('/userpage')
 def user():
-    return render_template('index.html')
+    loginname
+    return render_template('index.html',loginname=loginname)
+
 
 @app.route('/adminusers')
 def adminusers():
@@ -104,7 +142,7 @@ def adminpage():
         admin = admin_dict.get(key)
         admin_list.append(admin)
 
-    return render_template('AdminHomePage.html', count=len(admin_list), admin_list=admin_list, loginname=loginname)
+    return render_template('AdminHomePage.html', count=len(admin_list), admin_list=admin_list)
 
 @app.route('/createUser', methods=['GET', 'POST'])
 def create_user():

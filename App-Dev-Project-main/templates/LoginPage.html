@@ -303,20 +303,21 @@
                     </div>
 
                     <div class="input-area">
-                        <form action="" method="post">
+                        <form action="/" method="post">
                             <div>
                                 <i class="fas fa-envelope"></i>
-                                <input type="email" placeholder="Email">
+                                <input type="email" placeholder="Email" id="email" name="email">
                             </div>
                             <div>
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password">
+                                <input type="password" placeholder="Password" id="password" name="password">
                             </div>
                             <div>
                                 <span>Forget Password? <a href="/forget">Click Here</a></span>
                             </div>
                             <span>Don't have account? <a href="/createUser">Register Here</a></span>
-                            <button class="btn"><a href="/userpage">Login</a></button>
+                            <!---<button class="btn"><a href="/userpage">Login</a></button>--->
+                            <input type="submit" value="Submit">
                         </form>
                         <span>Admin Login<a href="/admin">Authorized users only</a></span>
                     </div>
