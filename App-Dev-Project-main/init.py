@@ -15,7 +15,6 @@ app = Flask(__name__)
 formData ={}
 
 
-
 @app.route('/', methods=['GET'])
 def home1():
     return render_template('LoginPage.html')
@@ -55,9 +54,11 @@ def home():
                 print("Login Successful")
                 return redirect(url_for('user'))
             else:
-                return redirect(url_for('home1'))
+                print('Email or Password incorrect')
+                return redirect(url_for('incorrect'))
         else:
-            return redirect(url_for('home1'))
+            print('Email or Password incorrect')
+            return redirect(url_for('incorrect'))
 
 
 @app.route('/userpage')
