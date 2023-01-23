@@ -19,6 +19,10 @@ formData ={}
 def home1():
     return render_template('LoginPage.html')
 
+@app.route('/typo', methods=['GET'])
+def incorrect():
+    return render_template('LoginIncorrectPage.html')
+
 @app.route('/', methods=['POST'])
 def home():
     if request.method == "POST":
