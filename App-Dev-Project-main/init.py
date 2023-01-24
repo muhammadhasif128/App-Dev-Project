@@ -23,6 +23,12 @@ def home1():
 def incorrect():
     return render_template('LoginIncorrectPage.html')
 
+
+@app.route('/typoadmin', methods=['GET'])
+def adminincorrect():
+    return render_template('AdminIncorrectPage.html')
+
+
 @app.route('/', methods=['POST'])
 def home():
     if request.method == "POST":
@@ -132,7 +138,7 @@ def admin():
             print(loginname)
         except NameError:
             print("Invalid Login Email.")
-            return redirect(url_for('admin'))
+            return redirect(url_for('adminincorrect'))
 
         password = request.form["password"]
         if password == "Fastburg12345!":
@@ -140,7 +146,7 @@ def admin():
             return redirect(url_for('adminpage'))
         else:
             print("Incorrect Details")
-            return redirect(url_for('admin'))
+            return redirect(url_for('adminincorrect'))
 
 @app.route('/adminpage')
 def adminpage():
