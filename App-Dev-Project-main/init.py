@@ -14,9 +14,12 @@ app = Flask(__name__)
 
 formData ={}
 
+@app.route('/')
+def home():
+    return render_template('homepage.html')
 
-@app.route('/', methods=['GET'])
-def home1():
+@app.route('/userlogin', methods=['GET'])
+def userlogin1():
     return render_template('LoginPage.html')
 
 @app.route('/typo', methods=['GET'])
@@ -29,8 +32,8 @@ def adminincorrect():
     return render_template('AdminIncorrectPage.html')
 
 
-@app.route('/', methods=['POST'])
-def home():
+@app.route('/userlogin', methods=['POST'])
+def userlogin():
     if request.method == "POST":
         # Get the form data
         email = request.form["email"]
@@ -194,7 +197,7 @@ def create_user():
 
         db.close()
 
-        return redirect(url_for('home'))
+        return redirect(url_for('userlogin'))
     return render_template('createUser.html', form=create_user_form)
 
 @app.route('/userRegister', methods=['GET', 'POST'])
@@ -226,7 +229,7 @@ def user_register():
 
         db.close()
 
-        return redirect(url_for('home'))
+        return redirect(url_for('userlogin'))
     return render_template('newRegister.html', form=create_user_form)
 
 
@@ -254,7 +257,7 @@ def create_food():
         print(food.get_name(), "was stored in food.db successfully with food_id ==", food.get_food_id())
 
         db.close()
-        return redirect(url_for('home'))
+        return redirect(url_for('userlogin'))
     return render_template('createFood.html', form=create_food_form)
 
 @app.route('/retrieveFood')
@@ -318,7 +321,7 @@ def update_food(id):
 @app.route('/successreg', methods=['GET', 'POST'])
 def successreg():
     if request.method == 'POST':
-        return redirect(url_for('home'))
+        return redirect(url_for('userlogin'))
     return render_template('output.html', registeredname=registeredname)
 
 
