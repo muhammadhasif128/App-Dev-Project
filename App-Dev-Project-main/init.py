@@ -150,6 +150,7 @@ def admin():
 
 @app.route('/adminpage')
 def adminpage():
+    loginname
     admin_dict = {}
     db = shelve.open('admin.db', 'r')
     admin_dict = db['Staff']
@@ -159,7 +160,7 @@ def adminpage():
         admin = admin_dict.get(key)
         admin_list.append(admin)
 
-    return render_template('AdminHomePage.html', count=len(admin_list), admin_list=admin_list)
+    return render_template('AdminHomePage.html', count=len(admin_list), admin_list=admin_list, loginname=loginname)
 
 @app.route('/createUser', methods=['GET', 'POST'])
 def create_user():
@@ -336,7 +337,7 @@ def create_admin():
         admin = Admin.Admin(create_admin_form.first_name.data, create_admin_form.last_name.data,
                             create_admin_form.today_date.data, create_admin_form.age.data,
                             create_admin_form.phone_no.data, create_admin_form.gender.data,
-                            create_admin_form.email_address.data)
+                            create_admin_form.email_address.data, create_admin_form.admin_password.data)
         admin.set_staff_id(GetUpdated_ID.Sfunction()+1)
         admin_dict[admin.get_staff_id()] = admin
         db['Staff'] = admin_dict
