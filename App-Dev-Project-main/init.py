@@ -27,6 +27,8 @@ def incorrect():
     return render_template('LoginIncorrectPage.html')
 
 
+
+
 @app.route('/typoadmin', methods=['GET'])
 def adminincorrect():
     return render_template('AdminIncorrectPage.html')
