@@ -18,6 +18,10 @@ formData ={}
 def home():
     return render_template('homepage.html')
 
+@app.route('/aboutpage')
+def about():
+    return render_template('about.html')
+
 @app.route('/userlogin', methods=['GET'])
 def userlogin1():
     return render_template('LoginPage.html')
