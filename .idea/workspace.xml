@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Homepage">
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/GetUpdated_ID.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/user.db.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/user.db.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/user.db.dir" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/nTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_20_2023_9_37_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_20_2023_9_37_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/createUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/createUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +45,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/mhasi/PycharmProjects/App-Dev-Project"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\App-Dev-Project-main\flask_experimental" />
