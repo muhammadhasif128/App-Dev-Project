@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm, TopUpUserForm, CreateCardForm, RefillCardForm
 import shelve
 import User
@@ -6,6 +6,8 @@ import Admin
 import Menu
 import random,string
 import Card
+import GetUpdated_ID
+import hashlib
 
 
 app = Flask(__name__)
@@ -14,11 +16,71 @@ formData ={}
 
 @app.route('/')
 def home():
+    return render_template('homepage.html')
+
+@app.route('/userlogin', methods=['GET'])
+def userlogin1():
     return render_template('LoginPage.html')
+
+@app.route('/typo', methods=['GET'])
+def incorrect():
+    return render_template('LoginIncorrectPage.html')
+
+
+
+
+@app.route('/typoadmin', methods=['GET'])
+def adminincorrect():
+    return render_template('AdminIncorrectPage.html')
+
+
+@app.route('/userlogin', methods=['POST'])
+def userlogin():
+    if request.method == "POST":
+        # Get the form data
+        email = request.form["email"]
+
+        user_dict = {}
+        db = shelve.open('user.db', 'r')
+        user_dict = db['Users']
+        db.close()
+        user_list = []
+        aList=[]
+        pList=[]
+        for key in user_dict:
+            user = user_dict.get(key)
+            user_list.append(user)
+        for i in user_list:
+            # print(i.get_email_address())
+            # print(i.get_password())
+            aList.append(i.get_email_address())
+            pList.append(i.get_password())
+            if str(i.get_email_address()) == email:
+                global loginname
+                loginname = i.get_first_name()
+                break
+        # print(aList)
+        # print(pList)
+
+        password = request.form["password"]
+        if email in aList:
+            cpass = aList.index(email)
+            if password == pList[cpass]:
+                print("Login Successful")
+                return redirect(url_for('user'))
+            else:
+                print('Email or Password incorrect')
+                return redirect(url_for('incorrect'))
+        else:
+            print('Email or Password incorrect')
+            return redirect(url_for('incorrect'))
+
 
 @app.route('/userpage')
 def user():
-    return render_template('index.html')
+    loginname
+    return render_template('index.html',loginname=loginname)
+
 
 @app.route('/adminusers')
 def adminusers():
@@ -26,7 +88,6 @@ def adminusers():
     db = shelve.open('user.db', 'r')
     users_dict = db['Users']
     db.close()
-
     users_list = []
     for key in users_dict:
         user = users_dict.get(key)
@@ -54,12 +115,47 @@ def output():
 def forget():
     return render_template('password.html')
 
-@app.route('/admin')
-def admin():
+@app.route("/admin", methods=['GET'])
+def admin1():
     return render_template('AdminLogin.html')
+
+@app.route("/admin", methods=['POST'])
+def admin():
+    if request.method == "POST":
+        # Get the form data
+        email = request.form["email"]
+
+        admin_dict = {}
+        db = shelve.open('admin.db', 'r')
+        admin_dict = db['Staff']
+        db.close()
+        admin_list = []
+        for key in admin_dict:
+            admin = admin_dict.get(key)
+            admin_list.append(admin)
+        for i in admin_list:
+            print(i.get_email_address())
+            if str(i.get_email_address())==str(email):
+                global loginname 
+                loginname = i.get_first_name()
+                break
+        try:
+            print(loginname)
+        except NameError:
+            print("Invalid Login Email.")
+            return redirect(url_for('adminincorrect'))
+
+        password = request.form["password"]
+        if password == "Fastburg12345!":
+            print("Login Successful")
+            return redirect(url_for('adminpage'))
+        else:
+            print("Incorrect Details")
+            return redirect(url_for('adminincorrect'))
 
 @app.route('/adminpage')
 def adminpage():
+    loginname
     admin_dict = {}
     db = shelve.open('admin.db', 'r')
     admin_dict = db['Staff']
@@ -69,8 +165,7 @@ def adminpage():
         admin = admin_dict.get(key)
         admin_list.append(admin)
 
-
-    return render_template('AdminHomePage.html', count=len(admin_list), admin_list=admin_list)
+    return render_template('AdminHomePage.html', count=len(admin_list), admin_list=admin_list, loginname=loginname)
 
 @app.route('/createUser', methods=['GET', 'POST'])
 def create_user():
@@ -84,10 +179,14 @@ def create_user():
         except:
             print("Error in retrieving Users from user.db.")
 
+
         user = User.User(create_user_form.first_name.data, create_user_form.last_name.data,
                          create_user_form.today_date.data, create_user_form.age.data, create_user_form.phone_no.data,
                          create_user_form.gender.data, create_user_form.email_address.data,
-                         create_user_form.postal_code.data, "Default")
+                         create_user_form.user_password.data,create_user_form.postal_code.data, "Default")
+        user.set_user_id(GetUpdated_ID.Ufunction()+1)
+        # hashlib.md5(user.set_password(user.get_password().encode()))
+        # hashlib.md5(user.get_password().encode())
         users_dict[user.get_user_id()] = user
         db['Users'] = users_dict
 
@@ -101,10 +200,10 @@ def create_user():
 
         db.close()
 
-        return redirect(url_for('adminusers'))
+        return redirect(url_for('userlogin'))
     return render_template('createUser.html', form=create_user_form)
 
-@app.route('/userRegister', methods=['GET', 'POST'])
+"""@app.route('/userRegister', methods=['GET', 'POST'])
 def user_register():
     create_user_form = CreateUserFrom(request.form)
     if request.method == 'POST' and create_user_form.validate():
@@ -133,12 +232,60 @@ def user_register():
 
         db.close()
 
-        return redirect(url_for('home'))
-    return render_template('newRegister.html', form=create_user_form)
+        return redirect(url_for('userlogin'))
+    return render_template('newRegister.html', form=create_user_form)"""
+
+
+@app.route('/userRegister', methods=['GET'])
+def user_register1():
+    create_user_form = CreateUserFrom(request.form)
+    return render_template('newRegister.html')
+
+@app.route('/registerError')
+def creation_error():
+    # dupe
+    return render_template('newRegister.html')
+
+@app.route('/userRegister', methods=['GET', 'POST'])
+def user_register():
+    create_user_form = CreateUserFrom(request.form)
+    if request.method == 'POST' and create_user_form.validate():
+        users_dict = {}
+        db = shelve.open('user.db', 'c')
+        email = request.form['email']
+        try:
+            users_dict = db['Users']
+        except:
+            print("Error in retrieving Users from user.db.")
+
+        # user = User.User(create_user_form.first_name.data, create_user_form.last_name.data,
+        #                  create_user_form.today_date.data, create_user_form.age.data, create_user_form.phone_no.data,
+        #                  create_user_form.gender.data, create_user_form.email_address.data,
+        #                  create_user_form.postal_code.data, "Default")
+        # users_dict[user.get_user_id()] = user
+        db['Users'] = users_dict
+
+        # Test codes
+        users_dict = db['Users']
+        user = users_dict[user.get_user_id()]
+        print(user.get_first_name(), user.get_last_name(), "was stored in user.db successfully with user_id ==",
+              user.get_user_id())
+        global registeredname
+        registeredname = user.get_first_name()
+
+        db.close()
+
+        return redirect(url_for('userlogin'))
+    else:
+        global dupe
+        dupe = "Email has already been used"
+        return redirect(url_for('creation_error'))
 
 
 
-@app.route('/createFood', methods=['GET','POST'])
+
+
+@app.route('/createFood', methods=['GET', 'POST'])
 def create_food():
     create_food_form = CreateFoodForm(request.form)
     if request.method == 'POST' and create_food_form.validate():
@@ -161,7 +308,7 @@ def create_food():
         print(food.get_name(), "was stored in food.db successfully with food_id ==", food.get_food_id())
 
         db.close()
-        return redirect(url_for('home'))
+        return redirect(url_for('userlogin'))
     return render_template('createFood.html', form=create_food_form)
 
 @app.route('/retrieveFood')
@@ -225,7 +372,7 @@ def update_food(id):
 @app.route('/successreg', methods=['GET', 'POST'])
 def successreg():
     if request.method == 'POST':
-        return redirect(url_for('home'))
+        return redirect(url_for('userlogin'))
     return render_template('output.html', registeredname=registeredname)
 
 
@@ -244,7 +391,8 @@ def create_admin():
         admin = Admin.Admin(create_admin_form.first_name.data, create_admin_form.last_name.data,
                             create_admin_form.today_date.data, create_admin_form.age.data,
                             create_admin_form.phone_no.data, create_admin_form.gender.data,
-                            create_admin_form.email_address.data)
+                            create_admin_form.email_address.data, create_admin_form.admin_password.data)
+        admin.set_staff_id(GetUpdated_ID.Sfunction()+1)
         admin_dict[admin.get_staff_id()] = admin
         db['Staff'] = admin_dict
 
@@ -537,8 +685,6 @@ def delete_card(id):
     db['Card'] = card_dict
     db.close()
     return redirect(url_for('retrieve_card'))
-
-
 
 
 if __name__ == '__main__':

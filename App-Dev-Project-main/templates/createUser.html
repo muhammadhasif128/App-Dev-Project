@@ -13,7 +13,7 @@
 
 <h1 class="display-4" style="font-family: Sans-Serif; text-align: center; color: white">User Registration</h1>
 <hr>
-{{typo}}
+
 <form method="POST" style="width: 40%; margin: 0 auto">
   <div class="form-group">
    {{ render_field(form.first_name, class="form-control") }}
@@ -33,6 +33,7 @@
   <div class="form-group">
    {{ render_field(form.gender, class="form-check", style="list-style-type:none") }}
   </div>
+    <span>{{typo}}</span>
   <div class="form-group">
    {{ render_field(form.email_address, class="form-control") }}
   </div>
