@@ -26,11 +26,9 @@ def about():
 def userlogin1():
     return render_template('LoginPage.html')
 
-@app.route('/typo', methods=['GET'])
-def incorrect():
-    return render_template('LoginIncorrectPage.html')
-
-
+# @app.route('/typo', methods=['GET'])
+# def incorrect():
+#     return render_template('LoginIncorrectPage.html')
 
 
 @app.route('/typoadmin', methods=['GET'])
@@ -63,8 +61,8 @@ def userlogin():
                 global loginname
                 loginname = i.get_first_name()
                 break
-        # print(aList)
-        # print(pList)
+        print(aList)
+        print(pList)
 
         password = request.form["password"]
         if email in aList:
@@ -73,11 +71,15 @@ def userlogin():
                 print("Login Successful")
                 return redirect(url_for('user'))
             else:
-                print('Email or Password incorrect')
-                return redirect(url_for('incorrect'))
+                global typo
+                typo = 'Email or Password incorrect'
+                return render_template('LoginPage.html', typo=typo)
         else:
             print('Email or Password incorrect')
-            return redirect(url_for('incorrect'))
+            typo = 'Email or Password incorrect'
+            return render_template('LoginPage.html', typo=typo)
+    return render_template('LoginPage.html')
+
 
 
 @app.route('/userpage')
@@ -119,11 +121,11 @@ def output():
 def forget():
     return render_template('password.html')
 
-@app.route("/admin", methods=['GET'])
-def admin1():
-    return render_template('AdminLogin.html')
+# @app.route("/admin", methods=['GET'])
+# def admin1():
+#     return render_template('AdminLogin.html')
 
-@app.route("/admin", methods=['POST'])
+@app.route("/admin", methods=['GET', 'POST'])
 def admin():
     if request.method == "POST":
         # Get the form data
@@ -146,8 +148,9 @@ def admin():
         try:
             print(loginname)
         except NameError:
+            typo = 'Email or Password is incorrect, please try again.'
             print("Invalid Login Email.")
-            return redirect(url_for('adminincorrect'))
+            return render_template('AdminLogin.html',typo=typo)
 
         password = request.form["password"]
         if password == "Fastburg12345!":
@@ -155,7 +158,9 @@ def admin():
             return redirect(url_for('adminpage'))
         else:
             print("Incorrect Details")
-            return redirect(url_for('adminincorrect'))
+            typo = 'Email or Password is incorrect, please try again.'
+            return render_template('AdminLogin.html',typo=typo)
+    return render_template('AdminLogin.html')
 
 @app.route('/adminpage')
 def adminpage():
@@ -204,7 +209,8 @@ def create_user():
                              create_user_form.today_date.data, create_user_form.age.data, create_user_form.phone_no.data,
                              create_user_form.gender.data, create_user_form.email_address.data, create_user_form.user_password.data,
                              create_user_form.postal_code.data, "Default")
-            user.set_user_id(GetUpdated_ID.Ufunction()+1)
+            uh = GetUpdated_ID.Ufunction()+ 1
+            user.set_user_id(uh)
             users_dict[user.get_user_id()] = user
             db['Users'] = users_dict
 
@@ -524,6 +530,7 @@ def delete_user(id):
     users_dict = {}
     db = shelve.open('user.db', 'w')
     users_dict = db['Users']
+    print(users_dict[id].get_user_id())
     users_dict.pop(id)
     db['Users'] = users_dict
     db.close()

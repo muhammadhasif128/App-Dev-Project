@@ -14,10 +14,18 @@ except:
 
 aList = []
 def Sfunction():
-    for key in dbA:
-        for i in dbA[key]:
-            aList.append(i)
-    return max(aList)
+    try:
+        for key in dbA:
+            for i in dbA[key]:
+                aList.append(i)
+    except:
+        aList.append(0)
+
+    try:
+        return max(aList)
+    except ValueError:
+        aList.append(0)
+        return max(aList)
 
 
 users_dict = {}
@@ -30,7 +38,14 @@ except:
 
 uList = []
 def Ufunction():
-    for key in dbU:
-        for i in dbU[key]:
-            uList.append(i)
-    return max(uList)
+    try:
+        for key in dbU:
+            for i in dbU[key]:
+                uList.append(i)
+    except:
+        uList.append(0)
+    try:
+        return max(uList)
+    except ValueError:
+        uList.append(0)
+        return max(uList)

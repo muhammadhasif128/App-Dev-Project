@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Homepage">
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nNew.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_20_2023_9_37_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_20_2023_9_37_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/GetUpdated_ID.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/GetUpdated_ID.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/createUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/createUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -45,12 +49,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "last_opened_file_path": "C:/Users/mhasi/PycharmProjects/App-Dev-Project"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\App-Dev-Project-main\flask_experimental" />
@@ -66,27 +67,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.init (2)">
-    <configuration name="GetUpdated_ID" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="App-Dev-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/App-Dev-Project-main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App-Dev-Project-main/GetUpdated_ID.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="init (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,6 +101,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/init.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="nNew" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="App-Dev-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nNew.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,18 +174,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.test (1)" />
-      <item itemvalue="Python.GetUpdated_ID" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.init (2)" />
       <item itemvalue="Python.init" />
+      <item itemvalue="Python.nNew" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.init (2)" />
+        <item itemvalue="Python.nNew" />
         <item itemvalue="Python.init" />
         <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.GetUpdated_ID" />
       </list>
     </recent_temporary>
   </component>
