@@ -11,6 +11,8 @@
         <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    {% block content %}
+    {% from "includes/_formHelper.html" import render_field %}
     <body class="sb-nav-fixed">
         {% block navbar %}
         {% include 'includes/_navbar2.html'%}
@@ -85,9 +87,11 @@
                                         <i class="fas fa-chart-area me-1"></i>
                                         Feedback Form
                                     </div>
-                                    <form action="" method="GET">
-                                        <label></label>
-                                        <textarea rows="4" cols="50"  placeholder="Input your feedback to FastBurg here."></textarea>
+                                    <span>{{sClear}}</span>
+                                    <form method="POST">
+                                        {{ render_field(form.feedback, class="form-control") }}
+                                        <br>
+                                        <input type="submit" value="Submit" id="finalsubmit" class="btn btn-primary">
                                     </form>
                                     <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                                 </div>
@@ -115,3 +119,4 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatea-demoables@latest" crossorigin="anonymous"></script>
     </body>
 </html>
+{% endblock %}

@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, session
-from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm, TopUpUserForm, CreateCardForm, RefillCardForm
+from flask import Flask, render_template, request, redirect, url_for
+from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm, TopUpUserForm, CreateCardForm, RefillCardForm,CreateFeedbackForm
 import shelve
 import User
 import Admin
@@ -7,8 +7,7 @@ import Menu
 import random,string
 import Card
 import GetUpdated_ID
-import hashlib
-
+import Feedback
 
 app = Flask(__name__)
 
@@ -82,10 +81,33 @@ def userlogin():
 
 
 
-@app.route('/userpage')
+@app.route('/userpage', methods=['GET', 'POST'])
 def user():
     loginname
-    return render_template('index.html',loginname=loginname)
+    createfeedback = CreateFeedbackForm(request.form)
+    if request.method == 'POST':
+        feedback_dict = {}
+        db = shelve.open('feedback.db', 'c')
+
+        try:
+            feedback_dict = db['Feedback']
+        except:
+            print('Error in retrieving Feedback from feedback.db')
+
+        feedback = Feedback.Feedback(createfeedback.feedback.data)
+        feedback_dict[feedback.get_ID()] = feedback
+        db['Feedback'] = feedback_dict
+
+        # Test Code
+        feedback_dict = db['Feedback']
+        feedback = feedback_dict[feedback.get_ID()]
+        print(f"New feedback was stored in feedback.db with feedback_ID == {feedback.get_ID()}")
+        db.close()
+        global sClear
+        sClear = "Feedback successfully submitted"
+        return render_template('index.html', loginname=loginname, form=createfeedback, sClear=sClear)
+
+    return render_template('index.html',loginname=loginname, form=createfeedback)
 
 
 @app.route('/adminusers')
@@ -100,6 +122,22 @@ def adminusers():
         users_list.append(user)
 
     return render_template('AdminHomePageUsers.html', count=len(users_list), users_list=users_list)
+
+@app.route('/adminreports')
+def adminreports():
+    feedback_dict = {}
+    db = shelve.open('feedback.db', 'r')
+    feedback_dict = db['Feedback']
+    db.close()
+    f_list = []
+    for key in feedback_dict:
+        feedback = feedback_dict.get(key)
+        f_list.append(feedback)
+
+    return render_template('AdminHomePageReports.html', count=len(f_list), f_list=f_list)
+
+
+
 
 @app.route("/form", methods=['POST', 'GET'])
 def userreg():
@@ -209,8 +247,8 @@ def create_user():
                              create_user_form.today_date.data, create_user_form.age.data, create_user_form.phone_no.data,
                              create_user_form.gender.data, create_user_form.email_address.data, create_user_form.user_password.data,
                              create_user_form.postal_code.data, "Default")
-            uh = GetUpdated_ID.Ufunction()+ 1
-            user.set_user_id(uh)
+            #uh = GetUpdated_ID.Ufunction()+ 1
+            #user.set_user_id(uh)
             users_dict[user.get_user_id()] = user
             db['Users'] = users_dict
 
