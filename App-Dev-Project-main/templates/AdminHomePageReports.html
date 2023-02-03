@@ -117,44 +117,44 @@
     {% block navbar %}
         {% include 'includes/_navbar.html'%}
     {% endblock %}
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav shadow-right accordion sb-sidenav-dark" id="sidenavAccordion" style = 'background-color : #272f3b'>
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
+        <div>
+<!--            <div id="layoutSidenav_nav">-->
+<!--                <nav class="sb-sidenav shadow-right accordion sb-sidenav-dark" id="sidenavAccordion" style = 'background-color : #272f3b'>-->
+<!--                    <div style="opacity: 0;" class="sb-sidenav-menu">-->
+<!--                        <div class="nav">-->
+<!--                            <div class="sb-sidenav-menu-heading">Core</div>-->
 
-                                <a class="nav-link" href="#collapseDashboards" data-bs-toggle="collapse">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                <div class = 'ps-lg-1 text-light'>Dashboard</div>
-                                <i class = "fas fa-angle-right ps-lg-5" style = 'font-size : 12px'></i>
-                            </a>
-                            <div class = 'collapse' id = 'collapseDashboards'>
-                                <nav class = 'nested-items'>
-                                    <a class = 'nav-link' href = '#'>Item 1</a>
-                                    <a class = 'nav-link' href = '#'>Item 2</a>
-                                    <a class = 'nav-link' href = '#'>Item 3</a>
-                                </nav>
-                            </div>
+<!--                                <a class="nav-link" href="#collapseDashboards" data-bs-toggle="collapse">-->
+<!--                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>-->
+<!--                                <div class = 'ps-lg-1 text-light'>Dashboard</div>-->
+<!--                                <i class = "fas fa-angle-right ps-lg-5" style = 'font-size : 12px'></i>-->
+<!--                            </a>-->
+<!--                            <div class = 'collapse' id = 'collapseDashboards'>-->
+<!--                                <nav class = 'nested-items'>-->
+<!--                                    <a class = 'nav-link' href = '#'>Item 1</a>-->
+<!--                                    <a class = 'nav-link' href = '#'>Item 2</a>-->
+<!--                                    <a class = 'nav-link' href = '#'>Item 3</a>-->
+<!--                                </nav>-->
+<!--                            </div>-->
 
-                            <div class="sb-sidenav-menu-heading">Support</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                <div class = 'ps-lg-1'>Layouts</div>
-                                <div class="sb-sidenav-collapse-arrow"></div>
-                            </a>
+<!--                            <div class="sb-sidenav-menu-heading">Support</div>-->
+<!--                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">-->
+<!--                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>-->
+<!--                                <div class = 'ps-lg-1'>Layouts</div>-->
+<!--                                <div class="sb-sidenav-collapse-arrow"></div>-->
+<!--                            </a>-->
 
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            </div>
-                            </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        {{user}}
-                    </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
+<!--                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">-->
+<!--                            </div>-->
+<!--                            </div>-->
+<!--                    </div>-->
+<!--                    <div class="sb-sidenav-footer">-->
+<!--                        <div class="small">Logged in as:</div>-->
+<!--                        {{user}}-->
+<!--                    </div>-->
+<!--                </nav>-->
+<!--            </div>-->
+            <div>
                 <main>
                     <header class = 'bg-primary pb-10'>
                         <div class="container welcome-sizing">
@@ -203,10 +203,12 @@
                         </div>
                     </div>
 
-<h3 class = 'nav-link mt-5 mx-4 text-dark'>Staff Database</h3>
-                    <div class = 'container-fluid mt-4 mb-4'>
-                        <div class = 'card'>
-                            <div class = 'card-body'>
+<h3 class = 'nav-link mt-5 mx-4 text-dark'>Staff Database
+<a href="/exportFeedback" class="btn btn-primary">Export Feedback</a></h3>
+
+    <div class = 'container-fluid mt-4 mb-4'>
+        <div class = 'card'>
+            <div class = 'card-body'>
 
 <table class="table table-striped">
  <thead>

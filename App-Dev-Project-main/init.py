@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm, TopUpUserForm, CreateCardForm, RefillCardForm,CreateFeedbackForm
+import pandas as pd
 import shelve
 import User
 import Admin
@@ -136,8 +137,28 @@ def adminreports():
 
     return render_template('AdminHomePageReports.html', count=len(f_list), f_list=f_list)
 
+@app.route('/exportFeedback')
+def export_feedback():
+
+    feedback_dict = {}
+    db = shelve.open('feedback.db', 'r')
+    feedback_dict = db['Feedback']
+    db.close()
+
+    df = pd.DataFrame()
 
 
+    for key in feedback_dict:
+        feedback = feedback_dict.get(key)
+        df = df.append({'User ID': feedback.get_ID(),
+                        'Feedback Description': feedback.get_feedback()
+                        },
+                        ignore_index=True)
+
+
+    df.to_excel('feedback.xlsx', index=False)
+
+    return redirect(url_for('adminreports'))
 
 @app.route("/form", methods=['POST', 'GET'])
 def userreg():
