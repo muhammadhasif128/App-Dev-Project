@@ -158,7 +158,7 @@
                 <main>
                     <header class = 'bg-primary pb-10'>
                         <div class="container welcome-sizing">
-                        <h1 class = 'header-title'>Welcome, {{user}}Name Of Admin</h1>
+                        <h1 class = 'header-title'>Welcome,</h1>
                         <ol class="breadcrumb mt-2">
                             <li class="active" id = 'dashboardstyling'>Admin Dashboard</li>
                         </ol>
@@ -171,10 +171,10 @@
                               <div class="row row-cols-1 row-cols-md-3 g-4">
 
                                   <div class="col">
-                                      <div class="card border-primary bg-primary text-light" >
+                                      <div class="card " style='background-color : whitesmoke;' >
                                   <div class="card-body p-5">
                                       <h5 class="card-title">Manage Staff Accounts</h5>
-                                      <p class="card-text">Currently on this page</p>
+                                      <p class="card-text">View staff information</p><a href="/adminpage"><button type="button" class="btn btn-primary">Take Me There</button></a>
                                    </div>
                                  </div>
                                </div>
@@ -183,17 +183,17 @@
                                       <div class="card" style = 'background-color : whitesmoke;'>
                                   <div class="card-body">
                                       <h5 class="card-title">Manage User Accounts</h5>
-                                      <p class="card-text">Update/Delete or view newly<br> created accounts</p><button type="button" class="btn btn-primary">Take Me There</button>
+                                      <p class="card-text">Update/Delete or view newly<br> created accounts</p><a href="/adminusers"><button type="button" class="btn btn-primary">Take me there</button></a>
                                    </div>
                                  </div>
                                </div>
 
 
                                   <div class="col">
-                                      <div class="card" style = 'background-color : whitesmoke;'>
-                                  <div class="card-body">
+                                      <div class="card border-primary bg-primary text-light" >
+                                  <div class="card-body p-5">
                                       <h5 class="card-title">View Reports</h5>
-                                      <p class="card-text">Sort out complaints and reports from customers</p><button type="button" class="btn btn-primary">Take Me There</button>
+                                      <p class="card-text">Currently on this page</p>
                                    </div>
                                  </div>
                                </div>
@@ -213,14 +213,8 @@
 <table class="table table-striped">
  <thead>
     <tr>
-        <th>Staff ID</th>
-        <th>Reg Date</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Gender</th>
-        <th>Age</th>
-        <th>Phone Number</th>
-        <th>Email</th>
+        <th>Feedback ID</th>
+        <th>Feedback</th>
         <th></th>
         <th></th>
     </tr>

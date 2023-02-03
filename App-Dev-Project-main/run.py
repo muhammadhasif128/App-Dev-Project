@@ -253,11 +253,14 @@ def create_user():
             except:
                 print("Error in retrieving Users from user.db.")
             eList=[]
+            iList =[]
             for key in users_dict:
                 mail = users_dict.get(key)
                 eList.append(key)
 
             for i in users_dict:
+                nid = users_dict[i].get_user_id()
+                iList.append(nid)
                 if str(email) == str(users_dict[i].get_email_address()):
                     global typo
                     typo = "Email already in use"
@@ -268,8 +271,9 @@ def create_user():
                              create_user_form.today_date.data, create_user_form.age.data, create_user_form.phone_no.data,
                              create_user_form.gender.data, create_user_form.email_address.data, create_user_form.user_password.data,
                              create_user_form.postal_code.data, "Default")
-            #uh = GetUpdated_ID.Ufunction()+ 1
-            #user.set_user_id(uh)
+
+            # uh = GetUpdated_ID.Ufunction() + 1
+            # user.set_user_id(uh)
             users_dict[user.get_user_id()] = user
             db['Users'] = users_dict
 
@@ -384,6 +388,7 @@ def delete_food(id):
     food_dict = {}
     db = shelve.open('food.db', 'w')
     food_dict = db['Food']
+    id += 1
     food_dict.pop(id)
     db['Food'] = food_dict
     db.close()
@@ -445,7 +450,7 @@ def create_admin():
                             create_admin_form.today_date.data, create_admin_form.age.data,
                             create_admin_form.phone_no.data, create_admin_form.gender.data,
                             create_admin_form.email_address.data, create_admin_form.admin_password.data)
-        admin.set_staff_id(GetUpdated_ID.Sfunction()+1)
+        # admin.set_staff_id(GetUpdated_ID.Sfunction()+1)
         admin_dict[admin.get_staff_id()] = admin
         db['Staff'] = admin_dict
 

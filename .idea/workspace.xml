@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Homepage">
+      <change beforePath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/App-Dev-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" afterDir="false" />
@@ -44,12 +46,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/mhasi/OneDrive/Nanyang Polytechnic (NYP)/Nanyang Polytechnic Modules/Year 1 Semester 2/App Development Project (4 CU)/Project/Github/Web-Application",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mhasi/OneDrive/Nanyang Polytechnic (NYP)/Nanyang Polytechnic Modules/Year 1 Semester 2/App Development Project (4 CU)/Project/Github/Web-Application&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\App-Dev-Project-main\flask_experimental" />
@@ -64,28 +66,7 @@
       <recent name="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\CRUD_Hasif\Web Application\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.init (2)">
-    <configuration name="init (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="App-Dev-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/App-Dev-Project-main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App-Dev-Project-main/init.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.run (1)">
     <configuration name="init" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,6 +109,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="App-Dev-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/App-Dev-Project-main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App-Dev-Project-main/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="App-Dev-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/App-Dev-Project-main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\App-Dev-Project-main\run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,41 +172,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="App-Dev-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/App-Dev-Project-main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App-Dev-Project-main/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Python.run" />
+      <item itemvalue="Python.run (1)" />
       <item itemvalue="Python.test (1)" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.init (2)" />
       <item itemvalue="Python.init" />
       <item itemvalue="Python.nNew" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.init (2)" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.run (1)" />
         <item itemvalue="Python.nNew" />
         <item itemvalue="Python.init" />
         <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
