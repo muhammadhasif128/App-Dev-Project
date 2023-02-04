@@ -368,6 +368,10 @@ def create_food():
         return redirect(url_for('userlogin'))
     return render_template('createFood.html', form=create_food_form)
 
+@app.route('/Menu')
+def menu():
+    return render_template('order_menu.html')
+
 @app.route('/retrieveFood')
 def retrieve_food():
     food_dict = {}
@@ -636,8 +640,8 @@ def create_card():
         global registeredname
         registeredname = card.get_name()
 
-        return redirect(url_for('successreg'))
-    return render_template('createCard.html', form=create_card_form, digitcode = digitcode)
+        return redirect(url_for('userpage'))
+    return render_template('createCard.html', form=create_card_form, digitcode=digitcode)
 
 @app.route('/retrieveCard')
 def retrieve_card():
@@ -674,7 +678,7 @@ def refill_card():
                card.set_tokens(refill_card_form.token_amt.data)
                db['Card'] = card_dict
                db.close()
-        return redirect(url_for('retrieve_card'))
+        return redirect(url_for('userpage'))
     else:
         return render_template('refillCard.html',form = refill_card_form)
 
