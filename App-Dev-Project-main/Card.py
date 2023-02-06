@@ -1,8 +1,9 @@
 class Card:
     count_id = 0
-    def __init__(self,name,card_id,date_created,lifespan,expiry_date,email):
+    def __init__(self,firstname,lastname,card_id,date_created,lifespan,expiry_date,email):
         Card.count_id += 1
-        self.__name = name
+        self.__name = firstname
+        self.__lastname = lastname
         self.__counter = Card.count_id
         self.__card_id = card_id
         self.__date_created = date_created
@@ -13,6 +14,12 @@ class Card:
 
     def get_name(self):
         return self.__name
+
+    # Updated
+    def set_lastname(self, lname):
+        self.__lastname = lname
+    def get_lastname(self):
+        return self.__lastname
 
     def get_tokens(self):
         return self.__tokens

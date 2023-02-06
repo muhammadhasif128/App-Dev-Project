@@ -11,7 +11,6 @@ import GetUpdated_ID
 import Feedback
 
 app = Flask(__name__)
-
 formData ={}
 
 @app.route('/')
@@ -370,7 +369,13 @@ def create_food():
 
 @app.route('/Menu')
 def menu():
-    return render_template('order_menu.html')
+    loginname
+    # 2 items each category
+    food_list = ['Chicken Burger', 'Beef Burger', 'French Fries', 'Potato Wedges',
+                 'Coke', 'Smoothie']
+    reco = food_list[random.randint(0, 5)]
+
+    return render_template('order_menu.html', reco=reco, loginname=loginname)
 
 @app.route('/retrieveFood')
 def retrieve_food():
@@ -625,7 +630,9 @@ def create_card():
             print("Error in retrieving Users from card.db.")
 
 
-        card = Card.Card(create_card_form.name.data, digitcode, create_card_form.date_created.data, create_card_form.lifespan.data,create_card_form.expiry_date.data,create_card_form.email_address.data)
+        card = Card.Card(create_card_form.name.data,create_card_form.lastname.data, digitcode,
+                         create_card_form.date_created.data, create_card_form.lifespan.data,
+                         create_card_form.expiry_date.data,create_card_form.email_address.data)
         card_dict[card.get_counter()] = card
         db['Card'] = card_dict
 
@@ -640,7 +647,7 @@ def create_card():
         global registeredname
         registeredname = card.get_name()
 
-        return redirect(url_for('userpage'))
+        return redirect(url_for('user'))
     return render_template('createCard.html', form=create_card_form, digitcode=digitcode)
 
 @app.route('/retrieveCard')
@@ -678,7 +685,7 @@ def refill_card():
                card.set_tokens(refill_card_form.token_amt.data)
                db['Card'] = card_dict
                db.close()
-        return redirect(url_for('userpage'))
+        return redirect(url_for('user'))
     else:
         return render_template('refillCard.html',form = refill_card_form)
 
@@ -715,7 +722,7 @@ def top_up_user(id):
 @app.route('/updateCard/<int:id>/', methods=['GET', 'POST'])
 def update_card(id):
     update_card_form = CreateCardForm(request.form)
-    if request.method == 'POST' and update_card_form.validate():
+    if request.method == 'POST':
         users_dict = {}
         db = shelve.open('card.db', 'w')
         card_dict = db['Card']
