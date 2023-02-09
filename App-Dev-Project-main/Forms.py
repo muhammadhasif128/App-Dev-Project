@@ -1,4 +1,4 @@
-from wtforms import Form, StringField, RadioField, validators, EmailField, DateField, IntegerField,FloatField, PasswordField
+from wtforms import Form, StringField, RadioField, validators, EmailField, DateField, IntegerField,FloatField, PasswordField, SelectField
 from datetime import datetime
 from dateutil.relativedelta import *
 
@@ -53,3 +53,16 @@ class CreateCardForm(Form):
 
 class CreateFeedbackForm(Form):
     feedback = StringField('Feedback', [validators.Length(min=1, max=50)], render_kw={"placeholder": "Enter Feedback"})
+
+
+class CheckoutForm(Form):
+    burger = SelectField("Select Burger", choices=['NIL','Chicken Burger - 10 Tokens', 'Beef Burger - 10 Tokens'])
+    drink = SelectField('Select Drink', choices=['NIL', 'Coke - 3 Tokens', 'Smoothie - 5 Tokens'])
+    side = SelectField('Select Side', choices=['NIL', 'Potato Wedges - 5 Tokens', 'French Fries - 3 Tokens'])
+    costs = IntegerField('Cost', [validators.NumberRange(min=0, max=1000)])
+    address = StringField('Address', [validators.Length(min=1, max=100), validators.DataRequired()], render_kw={'placeholder': "Address"})
+    postal_code = IntegerField("Postal Code", [validators.NumberRange(min=0, max=999999)], render_kw={"placeholder": "Enter your 6 digit postal code"})
+    wallet = StringField('Wallet ID', [validators.Length(min=1, max=100), validators.DataRequired()], render_kw={'placeholder': 'Enter Wallet ID'})
+    name = StringField('Customer Name', [validators.Length(min=1, max=100), validators.DataRequired()], render_kw={'placeholder': 'Enter Your Name'})
+
+

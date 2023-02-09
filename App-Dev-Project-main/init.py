@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
-from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm, TopUpUserForm, CreateCardForm, RefillCardForm,CreateFeedbackForm
+from Forms import CreateUserFrom, CreateAdminForm, CreateFoodForm, TopUpUserForm, CreateCardForm, RefillCardForm,CreateFeedbackForm, CheckoutForm
 import pandas as pd
 import shelve
 import User
 import Admin
 import Menu
+import Order
 import random,string
 import Card
 import GetUpdated_ID
@@ -17,9 +18,60 @@ formData ={}
 def home():
     return render_template('homepage.html')
 
-@app.route('/checkoutpage')
+@app.route('/checkoutpage', methods=['GET', 'POST'])
 def checkout():
-    return render_template('checkout.html')
+    makeorder = CheckoutForm(request.form)
+    if request.method == 'POST' and makeorder.validate():
+        order_dict = {}
+        dbo = shelve.open('order.db', 'c')
+        card_dict = {}
+        user_dict = {}
+        dbc = shelve.open('card.db', 'r')
+        dbu = shelve.open('user.db', 'r')
+        cname = request.form['name']
+        wID = request.form['wallet']
+
+        try:
+            order_dict = dbo['Orders']
+            user_dict = dbu['Users']
+            card_dict = dbc['Card']
+        except:
+            print('Error in retrieving Databases')
+
+        ulist = []
+        clist = []
+        # for k1 in user_dict:
+        #     name = user_dict.get(k1)
+        #     ulist.append(name)
+
+        for k1 in user_dict:
+            name = user_dict[k1].get_user_id()
+            ulist.append(name)
+            if str(cname) != str(f"{user_dict[k1].get_first_name()} {user_dict[k1].get_last_name()}"):
+                uerror = 'Customer names do not match'
+                return render_template('makeorder.html', uerror=uerror, form=makeorder)
+
+        for k2 in card_dict:
+            card = card_dict[k2].get_counter()
+            clist.append(card)
+            if str(cname) != str(card_dict[k2].get_card_id()):
+                cerror = 'Card IDs do not match'
+                return render_template('makeorder.html', cerror=cerror, form=makeorder)
+
+        order = Order.Order(makeorder.burger.data, makeorder.drink.data, makeorder.side.data,
+                            makeorder.costs.data, makeorder.name.data, makeorder.wallet.data,
+                            makeorder.address.data, makeorder.postal_code.data)
+
+        order_dict[order.get_order_id()] = order
+        dbo['Order'] = order_dict
+
+        order_dict = dbo['Order']
+        order = order_dict[order.get_order_id()]
+        print(f"{order.get_burger()}, {order.get_drink()}, {order.get_side()}, was stored"
+              f"in order.db with ID == {order.get_order_id()}")
+        dbo.close()
+        return redirect(url_for('user'))
+    return render_template('makeorder.html', form=makeorder)
 
 @app.route('/checkoutoutput')
 def checkoutoutput():
