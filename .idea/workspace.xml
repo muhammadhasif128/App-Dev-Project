@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Homepage">
+      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/checkoutoutput.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/Card.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/Forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dir" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/CreateCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/CreateCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/order_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/order_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,9 +46,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mhasi&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\App-Dev-Project-main\flask_experimental" />
@@ -67,8 +66,8 @@
       <recent name="C:\Users\Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\CRUD_Hasif\Web Application\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.init (2)">
-    <configuration name="init (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.init ">
+    <configuration name="init " type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="App-Dev-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -174,15 +173,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.init " />
       <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.init (2)" />
       <item itemvalue="Python.init" />
       <item itemvalue="Python.nNew" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.init (2)" />
+        <item itemvalue="Python.init " />
         <item itemvalue="Python.nNew" />
         <item itemvalue="Python.init" />
         <item itemvalue="Python.test (1)" />

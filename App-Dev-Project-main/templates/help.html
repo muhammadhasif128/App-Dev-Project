@@ -17,6 +17,7 @@
 .main{
     position: relative;
     height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)), url(https://bottled-up.com/wp-content/uploads/2020/10/Help.jpg);
 }
 
 .main svg{
@@ -57,7 +58,7 @@
 .container{
     height: 75vh;
     width: 80vw;
-    color: #fff0;
+    color: white;
     position: absolute;
     top: 60%;
     left: 50%;
@@ -67,6 +68,10 @@
     padding: 70px 0 30px 0;
 }
 
+.content{
+    margin-top: 100px;
+}
+
 
 .photo{
     position: relative;
@@ -74,7 +79,7 @@
     height: 100%;
     padding: 0 20px;
 }
- 
+
 .photo img{
     position: relative;
     width: 100%;
@@ -274,67 +279,29 @@ input[type=submit]{
             </div>
         </div>
 
-
-        <div class="container" style="justify-content:center;">
-            <!---<div class="photo">
-                 side image (insert company logo)
-                <img src="{{ url_for('static', filename='McDonald_Golden_Arches.svg.png')}}">
-            </div> --->
-
-            <div class="form-cont">
-                <div class="inner-form">
-                    <!-- image above login panel (change accordingly)-->
-                    <img src="{{ url_for('static', filename='appdevlogo.png')}}" alt="avatar">
-                    
-                    <div class="social-login">
-                        <span>Social Login</span>
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="input-area">
-                        <span>{{typo}}</span>
-                        <form action="/userlogin" method="post">
-                            <div>
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" placeholder="Email" id="email" name="email">
-                            </div>
-                            <div>
-                                <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" id="password" name="password">
-                            </div>
-                            <div>
-                                <span>Forget Password? <a href="/forget">Click Here</a></span>
-                            </div>
-                            <span>Don't have account? <a href="/createUser">Register Here</a></span>
-                            <!---<button class="btn"><a href="/userpage">Login</a></button>--->
-                            <input type="submit" value="Submit">
-                        </form>
-                        <span>Admin Login<a href="/admin">Authorized users only</a></span>
-                    </div>
-                </div>
+        <div class="container" style="justify-content:center; display: inline-block;">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">36 Keong Saik Rd</div>
+              <div class="text-two">Singapore 089143</div>
             </div>
+              <br>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">83436485</div>
+            </div>
+              <br>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">fastburg@gmail.com</div>
+            </div>
+          </div>
+        </div>
         </div>
     </section>
-
-    <script>
-        let toggler = document.querySelector('.toggle');
-        let menu = document.querySelector('.nav-menu');
-        let close = document.querySelector('.close');
-
-
-        toggler.addEventListener('click', () =>{
-            menu.style.display ='block';
-            console.log('clicked')
-        });
-
-        close.addEventListener('click', () =>{
-            menu.style.display = '';
-            cons
-        });
-    </script>
 </body>
-</html>

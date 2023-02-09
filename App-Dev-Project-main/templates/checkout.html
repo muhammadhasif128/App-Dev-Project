@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>Checkout Page</title>
+    <style>
+        *{
+          transition: 5s ease in;
+        }
+
+        html{
+          scroll-behavior: smooth;
+        }
+
+        body{
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg);
+            background-color:#000;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: table;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .row {
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE10 */
+          flex-wrap: wrap;
+          margin: 100px;
+        }
+
+        .col-50,
+        .col-75 {
+          padding: 0 100px;
+        }
+
+        .container {
+          background-color: #ADD8E6;
+          padding: 10px 10px 15px 10px;
+          border: 1px solid black;
+          border-radius: 10px;
+        }
+
+        input[type=text] {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+
+         input[type=number] {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+
+        select{
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+
+
+        .btn {
+              background-color: white;
+              color: black;
+              padding: 12px;
+              margin: 10px 0;
+              border: none;
+              width: 100%;
+              border: 1px solid black;
+              border-radius: 3px;
+              cursor: pointer;
+              font-size: 17px;
+            }
+
+        .btn:hover{
+            background-color: #ADD8E6;
+        }
+
+        .order{
+          text-align: center;
+          margin: auto;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        a{
+          text-decoration: none;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+        @media (max-width: 800px) {
+          .row {
+            flex-direction: column-reverse;
+          }
+          .col-25 {
+            margin-bottom: 20px;
+          }
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form>
+          <div class="col-50">
+            <h3 style="text-align: center;">Checkout Page</h3>
+            <label for="name">Name registered on FastBurg's E-Wallet</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Muhammad Hasif" required>
+            <label for="ccnum">Your E-Wallet ID</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="e.g. SNYTWPZKAFS0THUP" maxlength="16" required>
+              <label for="Cost (Tokens)">Cost (Tokens)</label>
+            <input type="number" id="Cost (Tokens)" name="Cost (Tokens)" placeholder="e.g. 10" min="0" required>
+            <label for="special order">Special Order</label>
+            <select id="special order" name="special order">
+              <option value="extra cheese on burger">extra cheese on burger</option>
+              <option value="no pickle on burger">no pickle on burger</option>
+              <option value="no vegetable on burger">no vegetable on burger</option>
+              <option value="non-chilled coke can">non-chilled coke can</option>
+            </select>
+              <br>
+              <label for="Address">Address</label>
+              <input type="text" id="Address" name="Address" placeholder="e.g. 104B Canberra Street" required>
+              <label for="postal code">Postal Code</label>
+                <input type="text" id="postal code" name="postal code" maxlength="6" placeholder="e.g. 752104" required>
+              <label>
+                <input type="checkbox" required>Information stated above are correct
+              </label>
+              <br>
+              <br>
+              <br>
+              <div class="order">
+                 <a href="/checkoutoutput" class="btn">Order</a>
+              </div>
+          </div>
+      </form>
+    </div>
+  </div>
+    </div>
+</form>
+</body>
+</html>

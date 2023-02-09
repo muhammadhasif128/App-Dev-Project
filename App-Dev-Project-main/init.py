@@ -17,9 +17,21 @@ formData ={}
 def home():
     return render_template('homepage.html')
 
+@app.route('/checkoutpage')
+def checkout():
+    return render_template('checkout.html')
+
+@app.route('/checkoutoutput')
+def checkoutoutput():
+    return render_template('checkoutoutput.html')
+
 @app.route('/aboutpage')
 def about():
     return render_template('about.html')
+
+@app.route('/helppage')
+def help():
+    return render_template('help.html')
 
 @app.route('/userlogin', methods=['GET'])
 def userlogin1():
@@ -78,6 +90,7 @@ def userlogin():
             typo = 'Email or Password incorrect'
             return render_template('LoginPage.html', typo=typo)
     return render_template('LoginPage.html')
+
 
 
 
