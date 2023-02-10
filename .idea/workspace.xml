@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Homepage">
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/makeorder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/Forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +40,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/mhasi"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\App-Dev-Project-main\flask_experimental" />
