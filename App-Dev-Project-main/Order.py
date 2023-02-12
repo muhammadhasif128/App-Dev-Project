@@ -12,6 +12,9 @@ class Order:
         self.__address = address
         self.__postcode = postcode
 
+    def get_name(self):
+        return self.__name
+
 
     def get_burger(self):
         return self.__burger
@@ -33,3 +36,6 @@ class Order:
 
     def get_order_id(self):
         return self.__count
+
+    def get_postcode(self):
+        return self.__postcode
