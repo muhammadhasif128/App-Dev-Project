@@ -52,7 +52,7 @@ class CreateCardForm(Form):
     expiry_date = DateField('Card expires on : ', default=(datetime.today() + relativedelta(years = 6)),render_kw={'readonly' : True})
 
 class CreateFeedbackForm(Form):
-    feedback = StringField('Feedback', [validators.Length(min=1, max=50)], render_kw={"placeholder": "Enter Feedback"})
+    feedback = StringField('Your Feedback', [validators.Length(min=1, max=50)], render_kw={"placeholder": "Enter Feedback", 'style': 'height: 100px'})
 
 
 class CheckoutForm(Form):
