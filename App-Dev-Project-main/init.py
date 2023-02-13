@@ -295,6 +295,10 @@ def output():
 def forget():
     return render_template('password.html')
 
+@app.route('/adminforget')
+def adminforget():
+    return render_template('passwordadmin.html')
+
 
 # @app.route("/admin", methods=['GET'])
 # def admin1():
