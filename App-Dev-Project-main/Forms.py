@@ -47,8 +47,8 @@ class CreateCardForm(Form):
     name = StringField('First Name', [validators.Length(min=1, max=50), validators.DataRequired()], render_kw={"placeholder": "First Name"})
     lastname = StringField('Last Name', [validators.Length(min=1, max=50), validators.DataRequired()], render_kw={"placeholder": "Last Name"})
     email_address = EmailField("Email Address", [validators.InputRequired()], render_kw={"placeholder": "Enter your email, eg:. example@gmail.com"})
-    date_created = DateField('Registration Date', default = datetime.today, render_kw={'readonly':True})
-    lifespan = IntegerField('Lifespan (years)', default=6,render_kw={'readonly' : True})
+    date_created = DateField('Registration Date', default = datetime.today, render_kw={'readonly': True})
+    lifespan = IntegerField('Lifespan (years)', default=6,render_kw={'readonly': True})
     expiry_date = DateField('Card expires on : ', default=(datetime.today() + relativedelta(years = 6)),render_kw={'readonly' : True})
 
 class CreateFeedbackForm(Form):
