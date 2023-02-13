@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="Added logos, styled the user page and make some stuff consistent">
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/privacypolicy.html" afterDir="false" />
+    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="added hover effects, privacy policy page">
+      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/termsconditions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminIncorrectPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminIncorrectPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/includes/_navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/password.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676230345263</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added hover effects, privacy policy page">
+      <created>1676264367009</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676264367009</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +353,7 @@
     <MESSAGE value="Changes made 22nd Jan" />
     <MESSAGE value="Homepage" />
     <MESSAGE value="Added logos, styled the user page and make some stuff consistent" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logos, styled the user page and make some stuff consistent" />
+    <MESSAGE value="added hover effects, privacy policy page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added hover effects, privacy policy page" />
   </component>
 </project>

@@ -19,6 +19,10 @@ formData = {}
 def home():
     return render_template('homepage.html')
 
+@app.route('/termsconditions')
+def termsconditions():
+    return render_template('termsconditions.html')
+
 
 @app.route('/checkoutpage', methods=['GET', 'POST'])
 def checkout():
