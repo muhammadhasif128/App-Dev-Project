@@ -187,6 +187,27 @@
             padding-right: 15px;
         }
 
+        .submit:hover{
+            background-color: red;
+            transition: 0.3s;
+        }
+
+        .home:hover{
+            color: black;
+            transition: 0.3s;
+        }
+
+        .about:hover{
+            color: black;
+            transition: 0.3s;
+        }
+
+        .help:hover{
+            color: black;
+            transition: 0.3s;
+        }
+
+
         @media(max-width: 990px){
             .navigation{
                 padding: 10px 100px;
@@ -274,9 +295,9 @@
                     <i class="fas fa-window-close"></i>
                 </div>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/aboutpage">About</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li><a class="home" href="/">Home</a></li>
+                    <li><a class="about" href="/aboutpage">About</a></li>
+                    <li><a class="help" href="/helppage">Help</a></li>
                 </ul>
             </div>
         </div>
@@ -288,7 +309,7 @@
                 <img src="{{ url_for('static', filename='McDonald_Golden_Arches.svg.png')}}">
             </div> --->
 
-            <div class="form-cont">
+            <div class="form-cont" style="border: 2px black solid;">
                 <div class="inner-form">
                     <!-- image above login panel (change accordingly)-->
                     <img src="{{ url_for('static', filename='appdevlogo.png')}}" alt="avatar">
@@ -311,7 +332,7 @@
                             <div>
                                 <span>Forget Password? <a href="/forget">Click Here</a></span>
                             </div>
-                            <input type="submit" value="Submit">
+                            <input class="submit" type="submit" value="Submit">
                         </form>
                         <a href="/userlogin">Return to user login</a>
                     </div>

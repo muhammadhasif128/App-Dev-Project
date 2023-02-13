@@ -87,6 +87,10 @@ def checkout():
     return render_template('makeorder.html', form=makeorder)
 
 
+@app.route('/privacypolicy')
+def privacypolicy():
+    return render_template('privacypolicy.html')
+
 @app.route('/checkoutoutput')
 def checkoutoutput():
     return render_template('checkoutoutput.html')
