@@ -34,6 +34,7 @@ def checkout():
         user_dict = {}
         dbc = shelve.open('card.db', 'r')
         dbu = shelve.open('user.db', 'r')
+        dbcw = shelve.open('card.db','w')
         cname = request.form['name']
         wID = request.form['wallet']
 
@@ -78,6 +79,14 @@ def checkout():
         order = Order.Order(makeorder.burger.data, makeorder.drink.data, makeorder.side.data,
                             makeorder.costs.data, makeorder.name.data, makeorder.wallet.data,
                             makeorder.address.data, makeorder.postal_code.data)
+
+
+        for k3 in card_dict:
+            print('check 1')
+            if str(wID) == card_dict[k3].get_card_id():
+                print(card_dict[k3].bought_tokens(order.get_costs()))
+                dbcw['Card'] = card_dict
+                break
 
         order_dict[order.get_order_id()] = order
         dbo['Order'] = order_dict

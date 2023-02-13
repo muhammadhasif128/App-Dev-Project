@@ -27,6 +27,10 @@ class Card:
     def set_tokens(self,tokens):
         self.__tokens = self.__tokens + tokens
 
+    def bought_tokens(self,costs):
+        self.__tokens = self.__tokens - costs
+        return self.__tokens
+
     def get_email(self):
         return self.__email
 

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="edited the help and about page">
-      <change afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/passwordadmin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/Card.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +46,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mhasi&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\O_Student\Desktop\Modules\IT1666 App Development Project\App-Dev-Project\App-Dev-Project-main\flask_experimental" />
