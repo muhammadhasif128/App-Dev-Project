@@ -606,7 +606,7 @@ def create_admin():
 
         db.close()
 
-        return redirect(url_for('successreg'))
+        return redirect(url_for('adminpage'))
     return render_template('createAdmin.html', form=create_admin_form)
 
 

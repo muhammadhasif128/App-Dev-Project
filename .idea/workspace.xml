@@ -3,13 +3,38 @@
   <component name="ChangeListManager">
     <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="edited the help and about page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/Card.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dir" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/feedback.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/feedback.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/order.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/order.db.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dir" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminIncorrectPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminIncorrectPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginIncorrectPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginIncorrectPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/base2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/createAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/createAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/includes/_navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/order_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/order_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/output.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/refillCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/refillCard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveFood.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveFood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveStaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveStaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/termsconditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/termsconditions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/updateFood.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/updateFood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
