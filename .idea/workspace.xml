@@ -1,40 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="edited the help and about page">
+    <list default="true" id="a641c1bb-b0bc-4427-9bd5-a380c5acaf49" name="Changes" comment="edited">
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/Admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/Forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/User.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/card.db.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/card.db.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/card.db.dir" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/createAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/createUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/includes/_formHelper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/includes/_navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/output.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/retrieveUsers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/templates/updateUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/user.db.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/user.db.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/Web Application/user.db.dir" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ordering_Page_Ryan/Card_Making_Ryan/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/CRUD_Hasif/Web Application/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/CRUD_Hasif/Web Application/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/CRUD_Hasif/Web Application/templates/output.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/Admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/Forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/User.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/card.db.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/card.db.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/card.db.dir" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/createAdmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/createUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/includes/_formHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/includes/_navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/output.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/retrieveUsers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/templates/updateUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/user.db.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/user.db.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/Web Application/user.db.dir" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/Card_Making_Ryan/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/admin.db.dir" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/card.db.dir" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/Forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/_navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/feedbacks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/forms(ws).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/retrieveReports.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/updateReports.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/wsReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/crudhelp/ws_init.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/feedback.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/feedback.db.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/feedback.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/feedback.db.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/feedback.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/feedback.db.dir" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/feedback.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/feedback.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/GetUpdated_ID.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/init.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/loginpage2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/loginpage3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/templates/401.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/templates/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/templates/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/templates/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/templates/tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/user.db.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/user.db.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/flask_experimental/user.db.dir" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/order.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/order.db.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/order.db.dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageReports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminHomePageUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminIncorrectPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminIncorrectPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/AdminLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginIncorrectPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginIncorrectPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/LoginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/base2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/createAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/createAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/help.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/homepage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/includes/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/order_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/order_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/output.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/refillCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/refillCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveFood.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveFood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveStaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveStaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/retrieveUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/termsconditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/termsconditions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/templates/updateFood.html" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/templates/updateFood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" beforeDir="false" afterPath="$PROJECT_DIR$/App-Dev-Project-main/user.db.dir" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676276110095</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="edited">
+      <created>1676364104487</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676364104492</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,6 +448,7 @@
     <MESSAGE value="added hover effects, privacy policy page" />
     <MESSAGE value="added a terms and conditions page" />
     <MESSAGE value="edited the help and about page" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited the help and about page" />
+    <MESSAGE value="edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited" />
   </component>
 </project>

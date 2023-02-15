@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}FastBurg - Report{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+
+<style>
+  .form-control {border-radius : 10px}
+</style>
+
+<h1 class="display-4" style="font-family: Sans-Serif; text-align: center; color: white">Report</h1>
+<hr>
+
+<form method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" value="{{ form.name.data }}">
+        {% for error in form.name.errors %}
+            <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" value="{{ form.email.data }}">
+        {% for error in form.email.errors %}
+            <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        <label for="feedback">Feedback</label>
+        <textarea name="feedback" class="form-control">{{ form.feedback.data }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+{% endblock %}
